@@ -1,0 +1,45 @@
+div{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: black 1px solid;
+}
+.class1 {
+    background-color: hsl(360, 50%, 0%);
+}
+
+.class2 {
+    background-color: hsl(360 50% 10%);
+}
+
+.class3 {
+    background-color: hsl(360, 50%, 20%);
+}
+
+.class4 {
+    background-color: hsl(360, 50%, 30%);
+}
+
+.class5 {
+    background-color: hsl(360, 50%, 40%);
+}
+
+.class6 {
+    background-color: hsl(360, 50%, 50%);
+}
+
+.class7 {
+    background-color: hsl(360, 50%, 60%);
+}
+
+.class8 {
+    background-color: hsl(360, 50%, 70%);
+}
+
+.class9 {
+    background-color: hsl(360, 50%, 80%);
+}
+
+.class10 {
+    background-color: hsl(360, 50%, 90%);
+}
