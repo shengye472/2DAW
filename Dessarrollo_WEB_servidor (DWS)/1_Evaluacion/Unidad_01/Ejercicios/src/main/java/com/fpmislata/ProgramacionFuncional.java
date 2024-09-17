@@ -1,7 +1,7 @@
 package com.fpmislata;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ProgramacionFuncional {
         public int ej01(List<Integer> listaEnteros){
@@ -21,9 +21,10 @@ public class ProgramacionFuncional {
                         .toList();
         }
 
-        public Integer ej04(List<Integer> numero){
+        public Optional<Integer> ej04(List<Integer> numero){
                 return numero.stream()
-                        .reduce(0,Integer::max);
+                        .max(Integer::compareTo);
+//                        .reduce(0,Integer::max);
         }
 
         public long ej05(List<Integer> numbers, int number2){
@@ -54,11 +55,12 @@ public class ProgramacionFuncional {
                 return numbers
                         .stream()
                         .filter(number -> number > number2)
-                        .findFirst().get();
+                        .findFirst().orElse(0);
         }
 
         public long ej10(List<String> stringList, String string){
-                return stringList.stream()
+                return stringList
+                        .stream()
                         .filter(st -> st.startsWith(string))
                         .count();
         }
