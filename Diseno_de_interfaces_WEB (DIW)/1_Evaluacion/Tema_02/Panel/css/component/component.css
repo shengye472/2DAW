@@ -1,0 +1,32 @@
+.c-panel {
+    border: 1px solid rgb(201, 201, 201);
+    padding: 2px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.c-panel__header {
+    border-bottom: 1px solid rgb(201, 201, 201);
+    background-color: rgb(201, 201, 201);
+    padding-left: 5px;
+    border-radius: 3px;
+}
+
+.c-panel__header--size-xl {
+    font-size: 20px;
+}
+
+.c-panel__footer {
+    border-top: 1px solid rgb(201, 201, 201);
+    background-color: rgb(201, 201, 201);
+    padding-left: 5px;
+    border-radius: 3px;
+}
+
+.c-panel__footer--size-xl {
+    font-size: 13px;
+}
+
+.c-panel__body {
+    padding: 5px;
+}
