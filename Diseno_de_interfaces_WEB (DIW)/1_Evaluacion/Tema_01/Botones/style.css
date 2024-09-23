@@ -1,0 +1,84 @@
+:root{
+ --blue: #0056b8;
+ --orange: #ed8936;
+ --red: #c53030;
+}
+
+.pblue{
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;
+}
+
+.sblue{
+    background-color: white;
+    color: var(--blue);
+    border: var(--blue) solid 1px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
+
+.tblue{
+    background-color: white;
+    color: var(--blue);
+    border: none;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
+
+.porange{
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
+
+.sorange{
+    background-color: white;
+    color: var(--orange);
+    border: var(--orange) solid 1px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
+
+.torange{
+    background-color: white;
+    color: var(--orange);
+    border: none;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
+
+.pred{
+    background-color: var(--red);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
+
+.sred{
+    background-color: white;
+    color: var(--red);
+    border: var(--red) solid 1px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
+
+.tred{
+    background-color: white;
+    color: var(--red);
+    border: none;
+    margin: 10px;
+    padding: 8px;
+    font-family: sans-serif;}
