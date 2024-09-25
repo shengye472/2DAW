@@ -21,7 +21,7 @@ let v1 = [1,2,3]
 let v2 = [...v1]
 console.log(v1)
 console.log(v2)
-v2[1] = "a"
+v2[1] = "a" 
 console.log(v1)
 console.log(v2)
 
