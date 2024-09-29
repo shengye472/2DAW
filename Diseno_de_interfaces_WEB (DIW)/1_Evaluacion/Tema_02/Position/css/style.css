@@ -1,0 +1,71 @@
+/* .container {
+    display: grid;
+    grid-template-areas:
+        ". header ."
+        "body-left . body-right";
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(255, 0, 0);
+}
+
+.body-left {
+    grid-area: body-left;
+    background-color: rgb(0, 255, 0);
+}
+
+.body-right {
+    grid-area: body-right;
+    background-color: rgb(0, 0, 255);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+} */
+
+.l-pyramid {
+    display: grid;
+    grid-template-areas:
+        ". header ."
+        "body-left . body-right";
+}
+
+.l-pyramid--inverted {
+    display: grid;
+    grid-template-areas:
+        "body-left . body-right"
+        ". header .";
+}
+
+.l-pyramid__header {
+    grid-area: header;
+}
+
+.l-pyramid__left {
+    grid-area: body-left;
+}
+.l-pyramid__right {
+    grid-area: body-right;
+}
+
+.--width-100{
+    width: 100px;
+}
+
+.--height-100{
+    height: 100px;
+}
+
+.--red{
+    background-color: rgb(255, 0, 0);
+}
+
+.--green{
+    background-color: rgb(0, 255, 0);
+}
+
+.--blue{
+    background-color: rgb(0, 0, 255);
+}

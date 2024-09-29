@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="read()">ver alumno</button>
+
+    <button onclick="add()">Añadir alumno</button>
+
+    <button onclick="remove()">Borrar alumno</button>
+
+    <button onclick="find()">Buscar</button>
+    <div id="print"></div>
+</body>
+
+<script>
+
+    let student = ["pepe", "paco", "pepa"]
+
+    function read() {
+        console.log(student)
+        document.getElementById("print").innerHTML = student
+    }
+
+    function add() {
+        let text = prompt("Introduce nombre: ")
+
+        student.includes(text) ? alert("ya esta en la lista") : student.push(text)
+
+        document.getElementById("print").innerHTML = student
+
+    }
+
+    function remove() {
+
+        let text = prompt("Introduce nombre: ")
+
+        let position = student.findIndex(s => s == text)
+        student.includes(text) ? student.splice(position, 1) : alert("No esta en la lista")
+
+        document.getElementById("print").innerHTML = student
+
+    }
+
+    function find() {
+        let text = prompt("Introduce nombre: ")
+        student.includes(text) ? document.getElementById("print").innerHTML = text: alert("no se ha encontrado")
+    }
+
+
+    let array = [1,4,1,4,8,9,1,8,5]
+    let unic = array.filter((a,i) => array.findIndex(b => b == a) == i)
+    console.log(unic)
+
+    
+</script>
+
+</html>
