@@ -7,8 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Genre {
+public class Author {
     private int id;
     private String name;
-    private String slug;
+    private String nationality;
+    private String biography;
+    private int birthYear;
+    private int deathYear;
 }
