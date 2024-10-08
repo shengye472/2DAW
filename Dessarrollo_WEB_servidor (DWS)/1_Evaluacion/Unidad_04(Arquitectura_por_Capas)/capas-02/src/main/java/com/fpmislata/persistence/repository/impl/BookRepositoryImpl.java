@@ -1,13 +1,11 @@
 package com.fpmislata.persistence.repository.impl;
 
 import com.fpmislata.domain.entity.Book;
-import com.fpmislata.domain.entity.Genre;
 import com.fpmislata.persistence.repository.AuthorRepository;
 import com.fpmislata.persistence.repository.BookRepository;
 import com.fpmislata.persistence.repository.GenreRepository;
 import com.fpmislata.persistence.repository.impl.mapper.BookRowMapper;
 import lombok.RequiredArgsConstructor;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.JdbcTemplate;
 

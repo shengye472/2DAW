@@ -1,0 +1,25 @@
+.l-pyramid {
+    display: grid;
+    grid-template-areas:
+        ". header ."
+        "body-left . body-right";
+
+    &--inverted {
+        display: grid;
+        grid-template-areas:
+            "body-left . body-right"
+            ". header .";
+    }
+
+    &__header {
+        grid-area: header;
+    }
+
+    &__left {
+        grid-area: body-left;
+    }
+
+    &__right {
+        grid-area: body-right;
+    }
+}
