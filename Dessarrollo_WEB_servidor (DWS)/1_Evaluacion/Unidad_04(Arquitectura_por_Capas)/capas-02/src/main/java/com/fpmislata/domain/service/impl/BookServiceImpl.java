@@ -1,6 +1,7 @@
 package com.fpmislata.domain.service.impl;
 
 import com.fpmislata.domain.entity.Book;
+import com.fpmislata.domain.exception.ResourceNotFoundException;
 import com.fpmislata.persistence.repository.BookRepository;
 import com.fpmislata.domain.service.BookService;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +21,6 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book findByIsbn(String isbn) {
-        return bookRepository.findByIsbn(isbn).orElseThrow(() -> new RuntimeException("Book not found"));
+        return bookRepository.findByIsbn(isbn).orElseThrow(() -> new ResourceNotFoundException("Book isbn " + isbn + " not found"));
     }
 }
