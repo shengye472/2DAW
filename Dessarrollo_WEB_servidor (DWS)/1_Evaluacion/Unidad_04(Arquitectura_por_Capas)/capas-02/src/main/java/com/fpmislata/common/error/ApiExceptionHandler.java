@@ -1,4 +1,4 @@
-package com.fpmislata.common.http_errors;
+package com.fpmislata.common.error;
 
 import com.fpmislata.domain.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
