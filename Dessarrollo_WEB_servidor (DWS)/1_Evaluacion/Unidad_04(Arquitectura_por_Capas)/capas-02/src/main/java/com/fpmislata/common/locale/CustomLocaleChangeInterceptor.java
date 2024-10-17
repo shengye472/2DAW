@@ -12,7 +12,8 @@ public class CustomLocaleChangeInterceptor extends LocaleChangeInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException {
         String lang = request.getHeader("Accept-Language");
-        Locale locale = lang != null? Locale.forLanguageTag(lang) : Locale.getDefault();
+//        Locale locale = lang != null? Locale.forLanguageTag(lang) : Locale.getDefault();
+        Locale locale = lang != null? Locale.forLanguageTag(lang) : Locale.of("es");
 
         LanguageUtils.setCurrentLocale(locale);
         return super.preHandle(request, response, handler);

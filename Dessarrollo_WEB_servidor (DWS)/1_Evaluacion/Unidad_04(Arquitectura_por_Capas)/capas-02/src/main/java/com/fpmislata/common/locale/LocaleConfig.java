@@ -14,19 +14,19 @@ import java.util.Locale;
 @Configuration
 public class LocaleConfig implements WebMvcConfigurer{
 
-    @Bean
-    public LocaleResolver localResolver(){
-        AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
-        localeResolver.setDefaultLocale(new Locale("es"));
-        return localeResolver;
-    }
+//    @Bean
+//    public LocaleResolver localResolver(){
+//        AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
+//        localeResolver.setDefaultLocale(new Locale("es"));
+//        return localeResolver;
+//    }
 
-    @Bean
-    public LocaleChangeInterceptor localeChangeInterceptor(){
-        LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
-        localeInterceptor.setParamName("Accept-Language");
-        return localeInterceptor;
-    }
+//    @Bean
+//    public LocaleChangeInterceptor localeChangeInterceptor(){
+//        LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
+//        localeInterceptor.setParamName("Accept-Language");
+//        return localeInterceptor;
+//    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

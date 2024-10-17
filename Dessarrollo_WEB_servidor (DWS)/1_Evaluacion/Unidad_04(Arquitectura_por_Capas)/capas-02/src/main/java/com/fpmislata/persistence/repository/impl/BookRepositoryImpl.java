@@ -22,11 +22,12 @@ public class BookRepositoryImpl implements BookRepository {
     private final GenreRepository genreRepository;
 
     @Override
-    public List<Book> getAll() {
+    public List<Book> getAll(int page, int size) {
         String sql = """
                 SELECT * FROM books
+                LIMIT ? OFFSET ?
                 """;
-        return jdbcTemplate.query(sql, new BookRowMapper());
+        return jdbcTemplate.query(sql, new BookRowMapper(), size, page * size);
     }
 
     @Override
@@ -45,5 +46,13 @@ public class BookRepositoryImpl implements BookRepository {
         } catch (Exception e) {
             return Optional.empty();
         }
+    }
+
+    @Override
+    public int count() {
+        String sql = """
+                SELECT COUNT(*) FROM books
+                """;
+        return jdbcTemplate.queryForObject(sql, Integer.class);
     }
 }
