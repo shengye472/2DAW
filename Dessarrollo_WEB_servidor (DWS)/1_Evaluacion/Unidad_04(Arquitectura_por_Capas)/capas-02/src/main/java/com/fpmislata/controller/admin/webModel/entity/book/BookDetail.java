@@ -1,16 +1,19 @@
-package com.fpmislata.controller.user.webModel.entity.book;
+package com.fpmislata.controller.admin.webModel.entity.book;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fpmislata.controller.user.webModel.entity.author.AuthorCollection;
+import com.fpmislata.controller.admin.webModel.entity.author.AuthorCollection;
 import com.fpmislata.controller.user.webModel.entity.publisher.PublisherCollection;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 public record BookDetail(
+        long id,
         String isbn,
-        String title,
-        String synopsis,
+        String titleEs,
+        String titleEn,
+        String synopsisEs,
+        String synopsisEn,
         BigDecimal price,
         float discount,
         String cover,

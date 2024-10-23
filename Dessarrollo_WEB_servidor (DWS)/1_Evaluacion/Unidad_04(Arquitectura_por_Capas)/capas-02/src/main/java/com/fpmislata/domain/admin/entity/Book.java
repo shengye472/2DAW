@@ -27,8 +27,8 @@ public class Book {
     private List<Author> authors;
 
     public String getTitle(){
-        String laguage = LanguageUtils.getCurrentLanguage();
-        if ("en".equals(laguage)) {
+        String language = LanguageUtils.getCurrentLanguage();
+        if ("en".equals(language)) {
             return titleEn;
         }
         return titleEs;
