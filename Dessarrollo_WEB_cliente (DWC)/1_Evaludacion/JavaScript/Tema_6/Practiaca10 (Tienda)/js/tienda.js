@@ -37,15 +37,46 @@ function ponIdBotonArticulo() {
 
 function buscarArticulo(id){
 	let articulo = listaArticulos.find(a => a.codigo === id)
-	console.log(articulo);
+	ponArticuloEnCarrito(articulo)
 }
 
-function ponArticuloEnCarrito(){
+function ponArticuloEnCarrito(articulo){
+	let listaArticulos = []
+	listaArticulos.push(articulo);
 
+	listaArticulos.forEach(a => {
+		let lista = `
+		<tr>
+			<td><img src="assets/${a.codigo}.jpg"></td>
+			<td>${a.nombre}</td>
+			<td>${a.descripcion}</td>
+			<td>"1"</td>
+			<td>${a.precio}</td>
+			<td>${a.precio}</td>
+		</tr>
+		`
+	});
+	
 }
 
 
 function verCarro() {
+	const dialogo = document.getElementById("dialogContent")
+	dialogo.innerHTML = `
+	<table>
+		<tr>
+			<th>&nbsp;</th>
+			<th>nombre</th>
+			<th>descripcion</th>
+			<th>precio</th>
+			<th>unidades</th>
+			<th>total</th>
+			<th>&nbsp;</th>
+		</tr>
+	`
+
+	dialogo.innerHTML += `
+	</table>`
 }
 
 function efectuaPedido() {
@@ -55,6 +86,7 @@ function efectuaPedido() {
 window.onload = () => {
 	pintaArticulos()
 	ponIdBotonArticulo()
+	verCarro()
 	document.getElementById("miCarro").onclick = () => document.getElementById("miDialogo").showModal()
 	document.getElementById("btnCierraDialog").onclick = () => document.getElementById("miDialogo").close()
 }

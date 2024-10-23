@@ -9,13 +9,36 @@ import java.util.Locale;
 
 public class CustomLocaleChangeInterceptor extends LocaleChangeInterceptor {
 
+    private final String defaultLanguage;
+
+    public CustomLocaleChangeInterceptor(String defaultLanguage) {
+        this.defaultLanguage = defaultLanguage;
+    }
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException {
         String lang = request.getHeader("Accept-Language");
 //        Locale locale = lang != null? Locale.forLanguageTag(lang) : Locale.getDefault();
-        Locale locale = lang != null? Locale.forLanguageTag(lang) : Locale.of("es");
+        Locale locale = lang != null? Locale.forLanguageTag(lang) : Locale.of(defaultLanguage);
 
         LanguageUtils.setCurrentLocale(locale);
+
         return super.preHandle(request, response, handler);
     }
+
+//    private final String defaultLanguage;
+//
+//    public CustomLocaleChangeInterceptor(String defaultLanguage) {
+//        this.defaultLanguage = defaultLanguage;
+//    }
+//
+//    @Override
+//    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException {
+//        String lang = request.getHeader("Accept-Language");
+//        Locale locale = lang != null ? Locale.forLanguageTag(lang) : Locale.of(defaultLanguage);
+//
+//        LanguageUtils.setCurrentLocale(locale);
+//
+//        return super.preHandle(request, response, handler);
+//    }
 }

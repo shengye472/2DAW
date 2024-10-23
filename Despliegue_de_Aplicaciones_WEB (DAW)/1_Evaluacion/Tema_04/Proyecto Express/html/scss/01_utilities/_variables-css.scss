@@ -1,0 +1,85 @@
+:root {
+
+  /*Variables color*/
+  @each $name, $values in $colors {
+    $counter: 1;
+
+    @each $color in $values {
+      --color-#{$name}-#{$counter}: #{$color};
+      $counter: $counter + 1;
+    }
+  }
+
+  /*Variables width*/
+  @each $name, $size in $width {
+    --width-#{$name}: #{$size};
+  }
+
+  /*Variables height*/
+  @each $name, $size in $height {
+    --height-#{$name}: #{$size};
+  }
+
+  /* Variables border-style*/
+  @each $value in $border-style {
+    --border-style-#{$value} : #{$value};
+  }
+
+  /* Variables border-radius*/
+  @each $key, $value in $border-radius {
+    --border-radius-#{$key} : #{$value};
+  }
+
+  /* Variables border-width*/
+  @each $key, $value in $border {
+    --border-width: #{$value};
+    --border-top-width-#{$key} : #{$value};
+    --border-bottom-width-#{$key} : #{$value};
+    --border-left-width-#{$key} : #{$value};
+    --border-right-width-#{$key} : #{$value};
+  }
+
+  /*Variables margin*/
+  @each $name, $value in $margin {
+    --margin-#{$name}: #{$value};
+  }
+
+  /*Variables padding*/
+  @each $name, $value in $padding {
+    --padding-#{$name}: #{$value};
+  }
+
+  /*Variables font-size*/
+  @each $name, $value in $font-size {
+    --font-size-#{$name}: #{$value};
+  }
+
+  /*Variables shadow*/
+  @each $name, $value in $shadow {
+    --shadow-#{$name}: #{$value};
+  }
+
+  /* Variables text-align*/
+  @each $name, $value in $text-align {
+    --text-align-#{$name} : #{$value};
+  }
+
+  /* Variable text-decoration*/
+  @each $name, $value in $text-decoration {
+    --text-decoration-#{$name}: #{$value};
+  }
+
+  /* Variable background*/
+  @each $name, $value in $background {
+    --background--#{$name}: #{$value};
+  }
+
+  @each $name, $value in $position {
+    --position-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $position-move {
+    --position--right-#{$name}: #{$value};
+    --position--left-#{$name}: #{$value};
+  }
+}

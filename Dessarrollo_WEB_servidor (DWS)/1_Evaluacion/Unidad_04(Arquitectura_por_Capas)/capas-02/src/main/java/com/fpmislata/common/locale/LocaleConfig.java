@@ -1,5 +1,6 @@
 package com.fpmislata.common.locale;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cglib.core.Local;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,8 +29,11 @@ public class LocaleConfig implements WebMvcConfigurer{
 //        return localeInterceptor;
 //    }
 
+    @Value("${app.language.default}")
+    private String defaultLanguage;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new CustomLocaleChangeInterceptor());
+        registry.addInterceptor(new CustomLocaleChangeInterceptor(defaultLanguage));
     }
 }

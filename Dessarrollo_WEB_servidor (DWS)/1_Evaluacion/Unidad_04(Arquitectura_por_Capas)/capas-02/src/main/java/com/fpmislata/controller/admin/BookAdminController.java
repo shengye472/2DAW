@@ -8,6 +8,7 @@ import com.fpmislata.domain.admin.entity.Book;
 import com.fpmislata.domain.admin.servise.BookAdminService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,25 +16,32 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/admin/books")
+@RequestMapping(BookAdminController.URL)
 @RequiredArgsConstructor
 public class BookAdminController {
+
+    public static final String URL = "/api/admin/books";
+    @Value("${app.base.url}")
+    private String baseUrl;
+
+    @Value("${app.pageSize.default}")
+    private String defaultPageSize;
+
     private final BookAdminService bookAdminService;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
             @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int size,
-            HttpServletRequest request) {
+            @RequestParam(required = false) Integer size) {
+        int pageSize = (size != null) ? size : Integer.parseInt(defaultPageSize);
         List<BookCollection> books = bookAdminService
-                .getAll(page - 1, size)
+                .getAll(page - 1, pageSize)
                 .stream()
                 .map(BookMapper.INSTANCE::toBookCollection)
                 .toList();
         int total = bookAdminService.count();
-        String baseUrl = request.getRequestURL().toString();
 
-        PaginatedResponse<BookCollection> response = new PaginatedResponse<>(books, (int) total, page, size, baseUrl);
+        PaginatedResponse<BookCollection> response = new PaginatedResponse<>(books, (int) total, page, pageSize, baseUrl + URL);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
