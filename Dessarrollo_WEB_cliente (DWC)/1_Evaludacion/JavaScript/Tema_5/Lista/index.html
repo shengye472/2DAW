@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="lista">
+        <option value="1">1</option>
+        <option value="2">2</option>    
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <button onclick="cambiar()">Cambiar</button>
+</body>
+
+<script>
+    let lista = document.getElementById("lista")
+    console.log(lista.value)
+
+    function cambiar() {
+        let select = prompt("numero")
+        lista.selectedIndex = select
+    }
+</script>
+</html>
