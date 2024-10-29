@@ -1,16 +1,31 @@
 Name = WhatsApp
-General description = It is a social network, allows users to send text menssage, picture, video, documents, voice notes and so on. on the internet.
 
 Specific description = 
-    goals = 
-        
+    WhatsApp is a free, multiplatform messaging app that allows users to send text messages, voice messages, images, videos, and documents, as well as make voice and video calls over the internet in real time. It is available on iOS, Android, and desktop platforms and uses users phone numbers as identifiers to connect them with their contacts.
+
+Characteristics = 
+    Group Chats: Create group chats with up to 1024 members, making it easy to stay in touch with family, friends, or work teams.
+
+    Status Updates: Share temporary status updates (text, photos, or videos) that disappear after 24 hours, similar to stories on other social media platforms.
+
+Look as = 
+    The app is designed with a simple, intuitive interface where the main chat screen shows all active conversations, and users can easily navigate to Calls, Status, or Settings.
 
 description logo = 
     is a green circle with a white chat bubble inside it, which contains a classic white phone icon. The chat bubble represents messaging, and the phone symbolizes communication.
 
 slogan = 
-    simple.secure.reliable
-    End-to-end encryption for privacy and security
-    Connect with your loved ones
-    No ads. No gimmicks.
-    Message anyone, anywhere
+    - simple.secure.reliable
+    - End-to-end encryption for privacy and security
+    - Connect with your loved ones
+    - No ads. No gimmicks.
+    - Message anyone, anywhere
+
+
+feature = WhatsApp Business
+    version designed for businesses, offering tools for customer support and engagement, including automated replies and quick responses.
+
+    logo = It is the same as WhatsApp with the difference of the middle phone icon that they change it for a "B"
+
+Summary =
+    WhatsApp provides simple, secure, and private communication and is a versatile platform for both personal users and businesses. With unique features, an intuitive interface, and a strong focus on privacy, it remains one of the world’s most popular messaging apps.
