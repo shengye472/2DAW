@@ -1,10 +1,10 @@
-package com.fpmislata.persistence.admin.impl;
+package com.fpmislata.persistence.admin.repository.impl;
 
 import com.fpmislata.domain.admin.entity.Book;
-import com.fpmislata.persistence.admin.AuthorAdminRepository;
-import com.fpmislata.persistence.admin.BookAdminRepository;
-import com.fpmislata.persistence.admin.GenreAdminRepository;
-import com.fpmislata.persistence.admin.impl.mapper.BookRowMapper;
+import com.fpmislata.persistence.admin.repository.AuthorAdminRepository;
+import com.fpmislata.persistence.admin.repository.BookAdminRepository;
+import com.fpmislata.persistence.admin.repository.GenreAdminRepository;
+import com.fpmislata.persistence.admin.repository.impl.mapper.BookRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -50,10 +50,10 @@ public class BookAdminRepositoryImpl implements BookAdminRepository {
     @Override
     public Optional<Book> findByIsbn(String isbn) {
         String sql = """
-                     SELECT * FROM books
-                     LEFT JOIN categories ON books.category_id = categories.id
-                     LEFT JOIN publishers ON books.publisher_id = publishers.id
-                     WHERE books.isbn = ?
+                    SELECT * FROM books
+                    LEFT JOIN categories ON books.category_id = categories.id
+                    LEFT JOIN publishers ON books.publisher_id = publishers.id
+                    WHERE books.isbn = ?
                 """;
         try {
             Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), isbn);

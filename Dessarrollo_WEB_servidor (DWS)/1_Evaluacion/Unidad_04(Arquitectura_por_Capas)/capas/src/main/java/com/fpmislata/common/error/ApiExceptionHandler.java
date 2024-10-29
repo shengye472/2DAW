@@ -16,12 +16,15 @@ public class ApiExceptionHandler {
     })
     @ResponseBody
     public ErrorMessage notFoundRequest(ResourceNotFoundException e) {
+        e.printStackTrace();
         return new ErrorMessage(e);
     }
+
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ErrorMessage handleGeneralException(Exception e){
+        e.printStackTrace();
         return new ErrorMessage(e);
     }
 }

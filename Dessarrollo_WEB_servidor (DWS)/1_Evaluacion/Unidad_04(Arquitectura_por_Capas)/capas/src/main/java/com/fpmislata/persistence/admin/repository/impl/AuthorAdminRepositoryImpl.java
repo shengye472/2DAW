@@ -1,8 +1,8 @@
-package com.fpmislata.persistence.admin.impl;
+package com.fpmislata.persistence.admin.repository.impl;
 
 import com.fpmislata.domain.admin.entity.Author;
-import com.fpmislata.persistence.admin.AuthorAdminRepository;
-import com.fpmislata.persistence.admin.impl.mapper.AuthorRowMapper;
+import com.fpmislata.persistence.admin.repository.AuthorAdminRepository;
+import com.fpmislata.persistence.admin.repository.impl.mapper.AuthorRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

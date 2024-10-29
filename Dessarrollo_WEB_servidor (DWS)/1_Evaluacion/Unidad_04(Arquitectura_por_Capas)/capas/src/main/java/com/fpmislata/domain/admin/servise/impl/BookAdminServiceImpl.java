@@ -3,7 +3,7 @@ package com.fpmislata.domain.admin.servise.impl;
 import com.fpmislata.domain.admin.entity.Book;
 import com.fpmislata.domain.admin.servise.BookAdminService;
 import com.fpmislata.domain.exception.ResourceNotFoundException;
-import com.fpmislata.persistence.admin.BookAdminRepository;
+import com.fpmislata.persistence.admin.repository.BookAdminRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +31,7 @@ public class BookAdminServiceImpl implements BookAdminService {
 
     @Override
     public Book findByIsbn(String isbn) {
+        System.out.println("Servicio");
         return bookAdminRepository.findByIsbn(isbn).orElseThrow(() -> new ResourceNotFoundException("book isbn " + isbn + " not found"));
     }
 }

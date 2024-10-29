@@ -1,4 +1,4 @@
-package com.fpmislata.persistence.admin;
+package com.fpmislata.persistence.admin.repository;
 
 import com.fpmislata.domain.admin.entity.Book;
 
