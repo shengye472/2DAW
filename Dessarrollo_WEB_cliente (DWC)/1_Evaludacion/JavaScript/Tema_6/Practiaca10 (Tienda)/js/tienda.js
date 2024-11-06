@@ -1,15 +1,18 @@
 criterios = ["Sin ordenar", "Ascendente por precio", "Descendente por precio"]
 
+const carrito = new Carrito
+
+
 function creaListaCriterios() {
-	
+
 }
 
 
 function pintaArticulos(orden) {
-	const contenedor =  document.getElementById("contenedor");
+	const contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = ""
 	listaArticulos.forEach(a => {
-		let cards =`
+		let cards = `
 			<div class="col">
 				<div class="card">
 					<img src="assets/${a.codigo}.jpg" class-"card-img-top">
@@ -31,56 +34,69 @@ function ponIdBotonArticulo() {
 	let botones = Array.from(contenedor.getElementsByClassName("boton-id"));
 	botones.forEach(a => {
 		// a.addEventListener("click",function(){console.log(this.id)})
-		a.addEventListener("click",() => buscarArticulo(a.id))
-	})	
+		a.addEventListener("click", () => buscarArticulo(a.id))
+	})
 }
 
-function buscarArticulo(id){
+function buscarArticulo(id) {
 	let articulo = listaArticulos.find(a => a.codigo === id)
 	ponArticuloEnCarrito(articulo)
 }
 
-function ponArticuloEnCarrito(articulo){
-	let listaArticulos = []
-	listaArticulos.push(articulo);
+const lista = []
 
-	listaArticulos.forEach(a => {
-		let lista = `
-		<tr>
-			<td><img src="assets/${a.codigo}.jpg"></td>
-			<td>${a.nombre}</td>
-			<td>${a.descripcion}</td>
-			<td>"1"</td>
-			<td>${a.precio}</td>
-			<td>${a.precio}</td>
-		</tr>
-		`
-	});
-	
+function ponArticuloEnCarrito(articulo) {
+	carrito.anyadeArticulo(articulo)	
+	console.log(lista)
+	verCarro()
 }
 
 
 function verCarro() {
 	const dialogo = document.getElementById("dialogContent")
-	dialogo.innerHTML = `
-	<table>
-		<tr>
-			<th>&nbsp;</th>
-			<th>nombre</th>
-			<th>descripcion</th>
-			<th>precio</th>
-			<th>unidades</th>
-			<th>total</th>
-			<th>&nbsp;</th>
-		</tr>
+	dialogo.innerHTML = ""
+	let contenidoTabla = `
+	<table class="table table-striped table-bordered">
+		<theader>
+			<tr class="table-light">
+				<th>&nbsp</th>
+				<th>nombre</th>
+				<th>descripcion</th>
+				<th>precio</th>
+				<th>unidades</th>
+				<th>total</th>
+				<th>&nbsp</th>
+			</tr>
+		</theader>
+		<tbody>
 	`
+	lista.forEach(a => {
+		let tabla = `
+			<tr>
+				<td><img width = 60px src="assets/${a.codigo}.jpg" ></td>
+				<td class="align-middle">${a.nombre}</td>
+				<td class="align-middle">${a.descripcion}</td>
+				<td class="align-middle">${a.precio}</td>
+				<td class="align-middle">${a.unidades}</td>
+				<td class="align-middle">${a.total}</td>
+				<td class="align-middle">
+					<button class="btn btn-primary" id="inc-${a.codigo}">+</button>
+						<button class="btn btn-warning" id="dec-${a.codigo}">-</button>
+						<button class="btn btn-danger" id="del-${a.codigo}">Borrar</button>
+				</td>
+		</tr>`
+		contenidoTabla += tabla
+	})
 
-	dialogo.innerHTML += `
+	contenidoTabla += `
+	</tbody>
 	</table>`
+
+	dialogo.innerHTML = contenidoTabla
 }
 
 function efectuaPedido() {
-	
+
 }
 
 window.onload = () => {
