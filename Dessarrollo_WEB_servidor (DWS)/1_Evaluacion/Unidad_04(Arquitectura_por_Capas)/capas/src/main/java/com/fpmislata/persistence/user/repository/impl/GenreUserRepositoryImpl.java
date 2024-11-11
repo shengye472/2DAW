@@ -1,7 +1,7 @@
 package com.fpmislata.persistence.user.repository.impl;
 
 import com.fpmislata.domain.user.entity.Genre;
-import com.fpmislata.persistence.user.repository.GenreUserRepository;
+import com.fpmislata.domain.user.repository.GenreUserRepository;
 import com.fpmislata.persistence.user.repository.impl.mapper.GenreRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;

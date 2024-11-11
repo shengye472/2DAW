@@ -1,4 +1,4 @@
-package com.fpmislata.persistence.admin.repository;
+package com.fpmislata.domain.admin.repository;
 
 import com.fpmislata.domain.admin.entity.Book;
 
@@ -13,4 +13,8 @@ public interface BookAdminRepository {
     int count();
 
     Optional<Book> findByIsbn(String isbn);
+
+    Optional<Book> findById(int id);
+
+    void save(Book book);
 }

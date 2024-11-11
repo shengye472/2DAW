@@ -1,7 +1,7 @@
 package com.fpmislata.persistence.user.repository.impl;
 
 import com.fpmislata.domain.user.entity.Author;
-import com.fpmislata.persistence.user.repository.AuthorUserRepository;
+import com.fpmislata.domain.user.repository.AuthorUserRepository;
 import com.fpmislata.persistence.user.repository.impl.mapper.AuthorRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -1,4 +1,4 @@
-package com.fpmislata.persistence.user.repository;
+package com.fpmislata.domain.user.repository;
 
 import com.fpmislata.domain.user.entity.Genre;
 

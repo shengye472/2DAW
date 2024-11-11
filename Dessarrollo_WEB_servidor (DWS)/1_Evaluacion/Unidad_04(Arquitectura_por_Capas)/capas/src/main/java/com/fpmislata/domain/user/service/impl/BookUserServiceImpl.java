@@ -1,15 +1,15 @@
 package com.fpmislata.domain.user.service.impl;
 
+import com.fpmislata.common.annotation.DomainService;
 import com.fpmislata.domain.user.entity.Book;
 import com.fpmislata.domain.exception.ResourceNotFoundException;
-import com.fpmislata.persistence.user.repository.BookUserRepository;
+import com.fpmislata.domain.user.repository.BookUserRepository;
 import com.fpmislata.domain.user.service.BookUserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@DomainService
 @RequiredArgsConstructor
 public class BookUserServiceImpl implements BookUserService {
     private final BookUserRepository bookRepository;

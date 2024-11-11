@@ -1,9 +1,9 @@
 package com.fpmislata.persistence.user.repository.impl;
 
 import com.fpmislata.domain.user.entity.Book;
-import com.fpmislata.persistence.user.repository.AuthorUserRepository;
-import com.fpmislata.persistence.user.repository.BookUserRepository;
-import com.fpmislata.persistence.user.repository.GenreUserRepository;
+import com.fpmislata.domain.user.repository.AuthorUserRepository;
+import com.fpmislata.domain.user.repository.BookUserRepository;
+import com.fpmislata.domain.user.repository.GenreUserRepository;
 import com.fpmislata.persistence.user.repository.impl.mapper.BookRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
