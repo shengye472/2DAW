@@ -66,14 +66,11 @@ public class BookAdminServiceImpl implements BookAdminService {
     @Override
     public void insertGenres(Integer id, List<Genre> genres) {
             Book book = findById(id);
-//  ------------------------------------------------------------------------------
-//        No entiendo esta parte, preguntar a marcos o cesar para explicarlo
             List<Genre> genreList = genreAdminRepository.findAllById(
                     genres.stream()
                             .map(Genre::getId)
                             .toArray(Long[]::new)
             );
-//  ------------------------------------------------------------------------------
             if(genreList.size() != genres.size()) {
                 throw new ResourceNotFoundException("Some authors were not found");
             }
