@@ -43,16 +43,15 @@ function buscarArticulo(id) {
 	ponArticuloEnCarrito(articulo)
 }
 
-const lista = []
+// const lista = []
 
 function ponArticuloEnCarrito(articulo) {
 	carrito.anyadeArticulo(articulo)
-	console.log(lista)
 }
 
 
 function verCarro() {
-	if (lista.length === 0) {
+	if (carrito.lista.length === 0) {
 		alert("El Carro esta vacio")
 	} else {
 		carrito.verCarrito()
@@ -60,12 +59,19 @@ function verCarro() {
 }
 
 function efectuaPedido() {
-
+	document.getElementById("btnEfectuaPedido").onclick = () => {
+		console.log(JSON.stringify(carrito.lista))
+		carrito.lista = []
+		console.log(carrito.lista)
+		alert("Pedido realizado")
+		document.getElementById("miDialogo").close()
+	}
 }
 
 window.onload = () => {
 	pintaArticulos()
 	ponIdBotonArticulo()
+	efectuaPedido()
 	document.getElementById("miCarro").onclick = () => verCarro()
 	document.getElementById("btnCierraDialog").onclick = () => document.getElementById("miDialogo").close()
 }

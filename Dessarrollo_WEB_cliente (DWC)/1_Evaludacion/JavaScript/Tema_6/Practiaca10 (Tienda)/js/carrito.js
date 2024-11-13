@@ -1,28 +1,29 @@
 class Carrito {
 	constructor(id) {
 		this.id = id;
+		this.lista = [];
 	}
 
 	anyadeArticulo(articulo) {
-		if (lista.find(a => a.codigo === articulo.codigo)) {
+		if (this.lista.find(a => a.codigo === articulo.codigo)) {
 			articulo.unidades++
 			articulo.total = articulo.precio * articulo.unidades
 		}else{
 			articulo.unidades = 1
 			articulo.total = articulo.precio
-			lista.push(articulo)
+			this.lista.push(articulo)
 		}
 	}
 
 	borraArticulo(codigo) {
-		lista.splice(lista.findIndex(a => a.codigo === codigo),1)
-		if (lista.length === 0) {
+		this.lista.splice(this.lista.findIndex(a => a.codigo === codigo),1)
+		if (this.lista.length === 0) {
 			document.getElementById("miDialogo").close()
 		}
 	}
 
 	modificaUnidades(codigo, n) {
-		let producto = lista.find(a => a.codigo === codigo)
+		let producto = this.lista.find(a => a.codigo === codigo)
 		producto.unidades += n
 		if (producto.unidades === 0) {
 			this.borraArticulo(codigo)
@@ -50,7 +51,7 @@ class Carrito {
 				</theader>
 				<tbody>
 	`
-		lista.forEach(a => {
+		this.lista.forEach(a => {
 			let tabla = `
 			<tr>
 				<td><img width = 60px src="assets/${a.codigo}.jpg" ></td>
