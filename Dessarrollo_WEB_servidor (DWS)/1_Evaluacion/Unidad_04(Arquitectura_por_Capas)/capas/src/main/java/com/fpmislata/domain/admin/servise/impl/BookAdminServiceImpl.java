@@ -7,11 +7,14 @@ import com.fpmislata.domain.admin.entity.Genre;
 import com.fpmislata.domain.admin.repository.AuthorAdminRepository;
 import com.fpmislata.domain.admin.repository.GenreAdminRepository;
 import com.fpmislata.domain.admin.servise.BookAdminService;
+import com.fpmislata.domain.exception.ResourceAlreadyExistsException;
 import com.fpmislata.domain.exception.ResourceNotFoundException;
 import com.fpmislata.domain.admin.repository.BookAdminRepository;
 import lombok.RequiredArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @DomainService
 @RequiredArgsConstructor
@@ -36,45 +39,68 @@ public class BookAdminServiceImpl implements BookAdminService {
     }
 
     @Override
-    public Book findByIsbn(String isbn) {
-        return bookAdminRepository.findByIsbn(isbn).orElseThrow(() -> new ResourceNotFoundException("book isbn " + isbn + " not found"));
+    public Optional<Book> findByIsbn(String isbn) {
+        return bookAdminRepository.findByIsbn(isbn);
     }
 
     @Override
-    public Book findById(int id) {
-        return bookAdminRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Book " + id + " not found"));
+    public Optional<Book> findById(int id) {
+        return bookAdminRepository.findById(id);
     }
 
-    @Override
-    public void insertAuthors(Integer id, List<Author> authors) {
-        Book book = findById(id);
-//  ------------------------------------------------------------------------------
-//        No entiendo esta parte, preguntar a marcos o cesar para explicarlo
-        List<Author> authorList = authorAdminRepository.findAllById(
-                authors.stream()
-                        .map(Author::getId)
-                        .toArray(Long[]::new)
-        );
-//  ------------------------------------------------------------------------------
-        if(authorList.size() != authors.size()) {
-            throw new ResourceNotFoundException("Some authors were not found");
+//    @Override
+//    public void insertAuthors(Integer id, List<Author> authors) {
+////  ------------------------------------------------------------------------------
+////        No entiendo esta parte, preguntar a marcos o cesar para explicarlo
+//        List<Author> authorList = authorAdminRepository.findAllById(
+//                authors.stream()
+//                        .map(Author::getId)
+//                        .toArray(Long[]::new)
+//        );
+////  ------------------------------------------------------------------------------
+//        if(authorList.size() != authors.size()) {
+//            throw new ResourceNotFoundException("Some authors were not found");
+//        }
+//        authorList.forEach(book::addAuthor);
+//        bookAdminRepository.save(book);
+//    }
+
+//    @Override
+//    public void insertGenres(Integer id, List<Genre> genres) {
+//            List<Genre> genreList = genreAdminRepository.findAllById(
+//                    genres.stream()
+//                            .map(Genre::getId)
+//                            .toArray(Long[]::new)
+//            );
+//            if(genreList.size() != genres.size()) {
+//                throw new ResourceNotFoundException("Some authors were not found");
+//            }
+//            genreList.forEach(book::addGenre);
+//            bookAdminRepository.save(book);
+//    }
+
+    public void addAuthor (Book book, Author author){
+        if (book.getAuthors() == null) {
+            book.setAuthors(new ArrayList<>());
         }
-        authorList.forEach(book::addAuthor);
-        bookAdminRepository.save(book);
+        if (book.getAuthors().contains(author)) {
+            throw new ResourceAlreadyExistsException("Author " + author.getName() + "already exists");
+        }
+        book.addAuthor(author);
+    }
+
+    public void addGenre(Book book, Genre genre){
+        if (book.getGenres() == null) {
+            book.setGenres(new ArrayList<>());
+        }
+        if (book.getGenres().contains(genre)) {
+            throw new ResourceAlreadyExistsException("Genre " + genre.getSlug() + "already exists");
+        }
+        book.addGenre(genre);
     }
 
     @Override
-    public void insertGenres(Integer id, List<Genre> genres) {
-            Book book = findById(id);
-            List<Genre> genreList = genreAdminRepository.findAllById(
-                    genres.stream()
-                            .map(Genre::getId)
-                            .toArray(Long[]::new)
-            );
-            if(genreList.size() != genres.size()) {
-                throw new ResourceNotFoundException("Some authors were not found");
-            }
-            genreList.forEach(book::addGenre);
-            bookAdminRepository.save(book);
+    public void save(Book book) {
+        bookAdminRepository.save(book);
     }
 }

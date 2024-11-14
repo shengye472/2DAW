@@ -5,6 +5,7 @@ import com.fpmislata.domain.admin.entity.Book;
 import com.fpmislata.domain.admin.entity.Genre;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BookAdminService {
     List<Book> getAll();
@@ -13,11 +14,17 @@ public interface BookAdminService {
 
     int count();
 
-    Book findByIsbn(String isbn);
+    Optional<Book> findByIsbn(String isbn);
 
-    Book findById(int id);
+    Optional<Book> findById(int id);
 
-    void insertAuthors(Integer id, List<Author> authors);
+    void addAuthor (Book book, Author author);
 
-    void insertGenres(Integer id, List<Genre> genres);
+    void addGenre(Book book, Genre genre);
+
+    void save(Book book);
+
+//    void insertAuthors(Integer id, List<Author> authors);
+
+//    void insertGenres(Integer id, List<Genre> genres);
 }

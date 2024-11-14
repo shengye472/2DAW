@@ -37,21 +37,22 @@ public class Book {
     }
 
     public void addAuthor (Author author){
-        if (authors == null) {
-            authors = new ArrayList<>();
-        }
-        if (authors.contains(author)) {
-            throw new ResourceAlreadyExistsException("Author " + author.getName() + "already exists");
-        }
+//        if (authors == null) {
+//            authors = new ArrayList<>();
+//        }
+//        if (authors.contains(author)) {
+//            throw new ResourceAlreadyExistsException("Author " + author.getName() + "already exists");
+//        }
         authors.add(author);
     }
 
     public void addGenre(Genre genre){
-        if (genres == null) {
-            genres = new ArrayList<>();
-        }
-        if (genres.contains(genre)) {
-            throw new ResourceAlreadyExistsException("Genre " + genre.getSlug() + "already exists");
-        }
+//        if (genres == null) {
+//            genres = new ArrayList<>();
+//        }
+//        if (genres.contains(genre)) {
+//            throw new ResourceAlreadyExistsException("Genre " + genre.getSlug() + "already exists");
+//        }
+        genres.add(genre);
     }
 }
