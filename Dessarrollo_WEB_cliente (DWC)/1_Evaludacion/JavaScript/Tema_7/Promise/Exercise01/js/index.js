@@ -1,5 +1,4 @@
 const urlArticulos = "http://localhost:3000/articulos"
-let server = new XMLHttpRequest()
 window.onload = () => {
     document.getElementById("verArticulos").addEventListener("click", () => {
         verArticulos()
