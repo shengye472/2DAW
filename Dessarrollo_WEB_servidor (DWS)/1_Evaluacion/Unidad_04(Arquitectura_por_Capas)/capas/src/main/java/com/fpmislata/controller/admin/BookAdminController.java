@@ -34,6 +34,7 @@ public class BookAdminController {
     private final BookAdminFindByIsbnUseCase bookAdminFindByIsbnUseCase;
     private final BookAdminInsertAuthorUseCase bookAdminInsertAuthorUseCase;
     private final BookAdminInsertGenreUseCase bookAdminInsertGenreUseCase;
+    private final BookAdminInsertUseCase bookAdminInsertUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
@@ -69,9 +70,9 @@ public class BookAdminController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-//    @PostMapping
-//    public ResponseEntity<Void> insertBook(@RequestBody Book book){
-//        bookAdminService.insertBook(book);
-//        return new ResponseEntity<>(HttpStatus.CREATED);
-//    }
+    @PostMapping
+    public ResponseEntity<Void> insertBook(@RequestBody Book book){
+        bookAdminInsertUseCase.insertBook(book);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 }
