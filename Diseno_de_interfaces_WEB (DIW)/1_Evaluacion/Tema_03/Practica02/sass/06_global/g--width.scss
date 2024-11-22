@@ -1,0 +1,8 @@
+/*Width*/
+g--width{
+    @each $name, $value in $width{
+        &-#{$name}{
+            width: var(--width-#{$name});
+        }
+    }
+}

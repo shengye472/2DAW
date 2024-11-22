@@ -1,0 +1,8 @@
+/*Height*/
+g--height{
+    @each $name, $value in $height{
+        &-#{$name}{
+            height: var(--height-#{$name});
+        }
+    }
+}

@@ -1,0 +1,47 @@
+$utilities: (
+    "padding" : (property: padding,
+        class: g--padding,
+        values: (1: 1px,
+            2: 5px,
+            3: 10px,
+            4: 20px,
+            5: 40px)),
+    "width" : (property: width,
+        class: g--width-,
+        values: (1: 10px,
+            2: 20px,
+            3: 25px,
+            4: 40px,
+            5: 70px)),
+    "font-size" : (property: font-size,
+        class: g--font-size-,
+        values: (6px, 7px, 10px, 12px, 14px, 16px, 18px, 20px)),
+    "$keys": (xxxxs, xxxs, xxs, xs, s, m, l, xl, xxl, xxxl, xxxl)
+);
+
+
+@each $category, $value in $utilities {
+    @if $category !="$keys" {
+        $property: map-get($value, property);
+        $class: map-get($value, class);
+        $values: map-get($value, values);
+
+        @if type-of($values)==list {
+            @for $i from 1 to length($values) {
+                $key: nth(map-get($utilities, "$keys"), $i);
+
+                .#{$class}-#{$key} {
+                    #{$property}: nth($values, $i)
+                }
+            }
+        }
+
+        @else {
+            @each $name, $valor in $values {
+                .#{$class}-#{$name} {
+                    #{$property} : #{$valor};
+                }
+            }
+        }
+    }
+}

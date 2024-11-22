@@ -1,0 +1,14 @@
+/*Font-Size*/
+g--font-size{
+    @each $name, $value in $font-size{
+        @if $name == ""{
+            &{
+                --font-size: var(--font-size);
+            }
+        } @else{
+            &-#{$name}{
+                --font-size-#{$name}: var(--font-size-#{$name});
+            }
+        } 
+    }
+}

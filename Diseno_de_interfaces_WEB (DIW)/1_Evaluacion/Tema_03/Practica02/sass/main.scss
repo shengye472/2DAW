@@ -1,0 +1,16 @@
+/* 01 Utilities*/
+@import
+"./01_utilities/variables_sass",
+"./01_utilities/variables_css";
+
+/* 06 Global*/
+@import 
+"./06_global/g--padding.scss",
+"./06_global/g--margin.scss",
+"./06_global/g--font-size.scss",
+"./06_global/g--height.scss",
+"./06_global/g--width.scss",
+"./06_global/g--border.scss",
+"./06_global/g--shadow.scss",
+"./06_global/g--colors.scss",
+"./06_global/g--background.scss";

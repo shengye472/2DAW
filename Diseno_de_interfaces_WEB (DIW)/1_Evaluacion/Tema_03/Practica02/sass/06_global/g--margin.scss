@@ -1,0 +1,58 @@
+    /*Margin*/
+    g--margin {
+        @each $name, $value in $margin {
+            &-#{$name} {
+                margin: var(--margin-#{$name});
+            }
+        }
+
+        &-top {
+            @each $name, $value in $margin {
+                &-#{$name} {
+                    margin-top: var(--margin-#{$name});
+                }
+            }
+        }
+
+        &-bottom {
+            @each $name, $value in $margin {
+                &-#{$name} {
+                    margin-bottom: var(--margin-#{$name});
+                }
+            }
+        }
+
+        &-left {
+            @each $name, $value in $margin {
+                &-#{$name} {
+                    margin-left: var(--margin-#{$name});
+                }
+            }
+        }
+
+        &-right {
+            @each $name, $value in $margin {
+                &-#{$name} {
+                    margin-right: var(--margin-#{$name});
+                }
+            }
+        }
+
+        &-horizontal {
+            @each $name, $value in $margin {
+                &-#{$name} {
+                    margin-left: var(--margin-#{$name});
+                    margin-right: var(--margin-#{$name});
+                }
+            }
+        }
+
+        &-vertical {
+            @each $name, $value in $margin {
+                &-#{$name} {
+                    margin-top: var(--margin-#{$name});
+                    margin-bottom: var(--margin-#{$name});
+                }
+            }
+        }
+    }

@@ -1,0 +1,85 @@
+:root{
+    /*padding*/
+    @each $name, $value in $padding{
+        --padding-#{$name}: #{$value};
+    }
+
+    /*margin*/
+    @each $name, $value in $margin{
+        --margin-#{$name}: #{$value};
+    }
+
+    /*font-size*/
+    @each $name, $value in $font-size{
+        @if $name == ""{
+            --font-size: #{$value};
+        } @else{
+            --font-size-#{$name}: #{$value};
+        } 
+    }
+
+    /*height*/
+    @each $name, $value in $height{
+        --height-#{$name}: #{$value};
+    }
+
+    /*widh*/
+    @each $name, $value in $width{
+        --width-#{$name}: #{$value};
+    }
+
+    /*border*/
+    @each $name, $value in $border{
+        --border-#{$name}: #{$value};
+    }
+
+    /*border-style*/
+    @each $name in $border-style{
+        --border-style-#{$name}: #{$name};
+    }
+
+    /*border-radius*/
+    @each $name, $value in $border-radius{
+        --border-radius-#{$name}: #{$value};
+    }
+
+    /*shadow*/
+    @each $name, $value in $shadow{
+        --shadow-#{$name}: #{$value};
+    }
+
+    /*colors*/
+    @each $name, $value in $colors{
+        $count: 10;
+        @each $color in $value{
+            @if $count == 50{
+                --color-#{$name}: #{$color};
+                
+            } @else {
+                --color-#{$name}-#{$count}: #{$color};
+            }
+
+            $count: $count + 10;
+        }
+    }
+
+    /*background*/
+    @each $name, $value in $colors{
+        $count: 10;
+        @each $color in $value{
+            @if $count == 50{
+                --background-color-#{$name}: #{$color};
+                
+            } @else {
+                --background-color-#{$name}-#{$count}: #{$color};
+            }
+
+            $count: $count + 10;
+        }
+    }
+
+    @each $name, $value in $background{
+        --background-#{$name}: #{$value};
+    }
+
+}

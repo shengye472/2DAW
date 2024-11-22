@@ -1,0 +1,46 @@
+/*Border*/
+g--border{
+    @each $name, $value in $border{
+        &-#{$name}{
+            border: var(--border-#{$name});
+        }
+        &-top-#{$name}{
+            border-top: var(--border-#{$name});
+        }
+        &-bottom-#{$name}{
+            border-bottom: var(--border-#{$name});
+        }
+        &-left-#{$name}{
+            border-left: var(--border-#{$name});
+        }
+        &-right-#{$name}{
+            border-right: var(--border-#{$name});
+        }
+    }
+
+    @each $name in $border-style{
+        &-style{
+            &-#{$name}{
+                border: var(--border-style-#{$name});
+            }
+            &-top-#{$name}{
+                border-top: var(--border-style-#{$name});
+            }
+            &-bottom-#{$name}{
+                border-bottom: var(--border-style-#{$name});
+            }
+            &-left-#{$name}{
+                border-left: var(--border-style-#{$name});
+            }
+            &-right-#{$name}{
+                border-right: var(--borde-styler-#{$name});
+            }
+        }
+    }
+
+    @each $name, $value in $border-radius{
+        &-radius-#{$name}{
+            border-radius: var(--border-radius-#{$name});
+        }
+    }
+}

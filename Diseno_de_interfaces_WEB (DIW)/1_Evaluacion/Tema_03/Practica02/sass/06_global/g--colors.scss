@@ -1,0 +1,20 @@
+/*Colors*/
+g--color{
+    @each $name, $value in $colors{
+        $count: 10;
+        @each $color in $value{
+            @if $count == 50{
+                &-#{$name}{
+                    color: #{$color};
+                }
+                
+            } @else {
+                &-#{$name}-#{$count}{
+                    color: #{$color};
+                }
+            }
+
+            $count: $count + 10;
+        }
+    }
+}

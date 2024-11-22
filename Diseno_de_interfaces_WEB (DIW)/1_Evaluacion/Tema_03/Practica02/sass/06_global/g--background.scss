@@ -1,0 +1,26 @@
+/*Background*/
+g--background{
+    @each $name, $value in $colors{
+        $count: 10;
+        @each $color in $value{
+            @if $count == 50{
+                &-#{$name}{
+                    background-color: #{$color};
+                }
+                
+            } @else {
+                &-#{$name}-#{$count}{
+                    background-color: #{$color};
+                }
+            }
+
+            $count: $count + 10;
+        }
+    }
+
+    @each $name, $value in $background{
+        &-#{$name}{
+            background: var(--background-#{$name});
+        }
+    }
+}

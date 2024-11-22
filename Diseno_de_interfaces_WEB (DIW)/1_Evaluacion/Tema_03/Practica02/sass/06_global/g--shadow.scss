@@ -1,0 +1,11 @@
+/*Shadow*/
+g--shadow {
+    @each $name, $value in $shadow {
+        &-box-#{$name}{
+            box-shadow: var(--shadow-#{$name});
+        }
+        &-text-#{$name}{
+            text-shadow: var(--shadow-#{$name});
+        }
+    }
+}
