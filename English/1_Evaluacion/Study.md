@@ -78,6 +78,8 @@ Refer to things that did not happen
 **Active:** The engineers **will present** a new project to the manager.
 **Passive:** A new project **will be presented** to the manager by the engineers.
 
+---
+
 ### Passive with direct and indirect object
 - The principal gave **diplomas** to **the students.**
     - Diplomas were given to the students.
