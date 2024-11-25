@@ -3,25 +3,25 @@
 
 |English|Spanish|English|Spanish|
 |:-----------|:-----------|:-----------|:-----------|
-|Adware||Phishing||
-|Antivirus Software||Piracy||
-|Craker||Prevent||
-|Cookies||Protect||
-|Cybercrime||Reliable||
-|Cyberstalking||Risk||
-|Damage||Safe||
-|Dangerous||Safety||
-|Decode||Secure||
-|Disable||Security||
-|Encryption||Spyware||
-|Highlight||SSl Certificate||
-|Hacker||Trojan||
-|IP Spoofing||Trust||
-|Malware||Unreliable||
-|Mistrust||Update||
-|Padlock||Username||
-|Password||Virus||
-|Plagiarism||Worm||
+|Adware|Software publicitario|Phishing|Suplantación de identidad|
+|Antivirus Software|Antivirus|Piracy|Piratería|
+|Craker|Pirata informático|Prevent|Prevenir|
+|Cookies|Cookies|Protect|Proteger|
+|Cybercrime|Ciberdelito|Reliable|Confiable|
+|Cyberstalking|Ciberacoso|Risk|Riesgo|
+|Damage|Daño|Safe|Seguro|
+|Dangerous|Peligroso|Safety|Seguridad|
+|Decode|Descodificar|Secure|Asegurar|
+|Disable|Desactivar|Security|Seguridad|
+|Encryption|Cifrado|Spyware|Software espía|
+|Highlight|Resaltar|SSl Certificate|Certificado SSL|
+|Hacker|Hacker|Trojan|Troyano|
+|IP Spoofing|Suplantación de IP|Trust|Confianza|
+|Malware|Software Malicioso|Unreliable|Poco confiable|
+|Mistrust|Desconfianza|Update|Actualizar|
+|Padlock|Candado|Username|Nombre de Usuario|
+|Password|Contraseña|Virus|Virus|
+|Plagiarism|Plagio|Worm|Gusano|
 
 ## Grammar
 ### Zero Conditional
@@ -48,15 +48,15 @@ Refer to things that did not happen
 ## Vocabulary
 |English|Spanish|English|Spanish|
 |:-----------|:-----------|:-----------|:-----------|
-|Analogue||Interactivity||
-|Animation||Install||
-|Device||Media||
-|Digital||Mobile Web Application||
-|Digitize||Motion||
-|Display||Native Application||
-|Gadget||Run||
-|House||Screen||
-|Hybrid Application||Simulation||
+|Analogue|Analógico|Interactivity|Interactividad|
+|Animation|Animación|Install|Instalar|
+|Device|Dispositivo|Media|Medios|
+|Digital|Digital|Mobile Web Application|Aplicación web móvil|
+|Digitize|Digitalizar|Motion|Movimiento|
+|Display|Monitor|Native Application|Aplicación Nativa|
+|Gadget|Dispositivo|Run|Ejecutar/Correr|
+|House|Guardar/Almacenar|Screen|Pantalla|
+|Hybrid Application|Aplicación Híbrida|Simulation|Simulación|
 
 ## Grammar
 
