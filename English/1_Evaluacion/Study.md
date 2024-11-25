@@ -1,26 +1,27 @@
 # Unit 7
 ## Vocabualary
 
-- Security          
-- Safety            
-- Worm              
-- Hacker            
-- Spyware           
-- Trojan            
-- Craker            
-- Malware           
-- Virus             
-- Adware            
-- Username          
-- Password          
-- Https             
-- Padlock           
-- Message           
-- Piracy            
-- Plagiarism        
-- Phishing          
-- IP Spoofing       
-- Cyberstalking
+|English|Spanish|English|Spanish|
+|:-----------|:-----------|:-----------|:-----------|
+|Adware||Phishing||
+|Antivirus Software||Piracy||
+|Craker||Prevent||
+|Cookies||Protect||
+|Cybercrime||Reliable||
+|Cyberstalking||Risk||
+|Damage||Safe||
+|Dangerous||Safety||
+|Decode||Secure||
+|Disable||Security||
+|Encryption||Spyware||
+|Highlight||SSl Certificate||
+|Hacker||Trojan||
+|IP Spoofing||Trust||
+|Malware||Unreliable||
+|Mistrust||Update||
+|Padlock||Username||
+|Password||Virus||
+|Plagiarism||Worm||
 
 ## Grammar
 ### Zero Conditional
@@ -45,16 +46,17 @@ Refer to things that did not happen
 
 # Unit 8
 ## Vocabulary
-- Interactivity
-- Simulation
-- Fair use
-- Video/Audio clip
-- Media
-- Animation
-- Video Game
-- Digtise
-- Presentation
-- Turorial
+|English|Spanish|English|Spanish|
+|:-----------|:-----------|:-----------|:-----------|
+|Analogue||Interactivity||
+|Animation||Install||
+|Device||Media||
+|Digital||Mobile Web Application||
+|Digitize||Motion||
+|Display||Native Application||
+|Gadget||Run||
+|House||Screen||
+|Hybrid Application||Simulation||
 
 ## Grammar
 
