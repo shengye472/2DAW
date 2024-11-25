@@ -1,0 +1,64 @@
+$utilities: (
+    "padding" : (usekey: 0,
+        property: padding,
+        class: g--padding,
+        values: (1: 1px,
+            2: 5px,
+            3: 10px,
+            4: 20px,
+            5: 40px)),
+    "width" : (usekey: 2,
+        property: width,
+        class: g--width-,
+        max: 20),
+    "font-size" : (usekey: 1,
+        property: font-size,
+        class: g--font-size-,
+        values: (6px, 7px, 10px, 12px, 14px, 16px, 18px, 20px)),
+    "$keys": (xxxxs, xxxs, xxs, xs, s, m, l, xl, xxl, xxxl, xxxl)
+);
+
+@function getBorderSize($size) {
+    @return $size * $size * 1px;
+}
+@function getName($i) {
+    @return $i;
+}
+
+@each $category, $value in $utilities {
+    @if $category !="$keys" {
+        $key: map-get($value, usekey);
+        $property: map-get($value, property);
+        $class: map-get($value, class);
+        $values: map-get($value, values);
+
+        @if $key ==1 {
+            @for $i from 1 to length($values) {
+                $key: nth(map-get($utilities, "$keys"), $i);
+
+                .#{$class}-#{$key} {
+                    #{$property}: nth($values, $i)
+                }
+            }
+        }
+
+        @else if $key ==2 {
+            $max: map-get($value, max);
+            
+            @for $i from 1 through $max {
+                $name: getName($i);
+                .#{$class}-#{$name} {
+                    #{$property}: getBorderSize($i)
+                }
+            }
+        }
+
+        @else {
+            @each $name, $valor in $values {
+                .#{$class}-#{$name} {
+                    #{$property} : #{$valor};
+                }
+            }
+        }
+    }
+}
