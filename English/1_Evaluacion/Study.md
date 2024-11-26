@@ -29,7 +29,7 @@ if + present simple, present simple.
 
 Refer to facts and things that always happen
 
-- **If** you **heat** water to 100ºC,it **boils**.
+- **If** you **heat** water to 100ºC, it **boils**.
 ### First Conditional
 if + present simple, will + infinitive.
 
