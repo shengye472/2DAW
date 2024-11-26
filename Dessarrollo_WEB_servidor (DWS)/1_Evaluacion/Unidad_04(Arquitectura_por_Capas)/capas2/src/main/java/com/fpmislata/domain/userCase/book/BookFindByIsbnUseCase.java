@@ -1,8 +1,8 @@
-package com.fpmislata.domain.admin.userCase.book;
+package com.fpmislata.domain.userCase.book;
 
 import com.fpmislata.domain.entity.Book;
 
-public interface BookAdminFindByIsbnUseCase {
+public interface BookFindByIsbnUseCase {
     Book findByIsbn(String isbn);
 
 }

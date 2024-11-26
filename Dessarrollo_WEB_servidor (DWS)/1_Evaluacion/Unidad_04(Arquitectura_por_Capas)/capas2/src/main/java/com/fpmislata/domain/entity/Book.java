@@ -1,13 +1,11 @@
-package com.fpmislata.domain.admin.entity;
+package com.fpmislata.domain.entity;
 
 import com.fpmislata.common.locale.LanguageUtils;
-import com.fpmislata.domain.exception.ResourceAlreadyExistsException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -36,23 +34,19 @@ public class Book {
         return titleEs;
     }
 
+    public String getSynopsis() {
+        String language = LanguageUtils.getCurrentLanguage();
+        if ("en".equals(language)) {
+            return synopsisEn;
+        }
+        return synopsisEs;
+    }
+
     public void addAuthor (Author author){
-//        if (authors == null) {
-//            authors = new ArrayList<>();
-//        }
-//        if (authors.contains(author)) {
-//            throw new ResourceAlreadyExistsException("Author " + author.getName() + "already exists");
-//        }
         authors.add(author);
     }
 
     public void addGenre(Genre genre){
-//        if (genres == null) {
-//            genres = new ArrayList<>();
-//        }
-//        if (genres.contains(genre)) {
-//            throw new ResourceAlreadyExistsException("Genre " + genre.getSlug() + "already exists");
-//        }
         genres.add(genre);
     }
 }

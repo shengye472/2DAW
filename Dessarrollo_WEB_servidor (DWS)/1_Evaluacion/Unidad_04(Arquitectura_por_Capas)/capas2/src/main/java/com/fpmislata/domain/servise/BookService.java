@@ -1,4 +1,4 @@
-package com.fpmislata.domain.admin.servise;
+package com.fpmislata.domain.servise;
 
 import com.fpmislata.domain.entity.Author;
 import com.fpmislata.domain.entity.Book;
@@ -7,7 +7,7 @@ import com.fpmislata.domain.entity.Genre;
 import java.util.List;
 import java.util.Optional;
 
-public interface BookAdminService {
+public interface BookService {
     List<Book> getAll();
 
     List<Book> getAll(int page, int size);

@@ -4,11 +4,10 @@ package com.fpmislata.controller.admin;
 import com.fpmislata.controller.admin.webModel.entity.book.BookCollection;
 import com.fpmislata.controller.admin.webModel.mapper.bookMapper.BookMapper;
 import com.fpmislata.controller.common.PaginatedResponse;
-import com.fpmislata.domain.admin.entity.Author;
-import com.fpmislata.domain.admin.entity.Book;
-import com.fpmislata.domain.admin.entity.Genre;
-import com.fpmislata.domain.admin.servise.BookAdminService;
-import com.fpmislata.domain.admin.userCase.book.*;
+import com.fpmislata.domain.entity.Author;
+import com.fpmislata.domain.entity.Book;
+import com.fpmislata.domain.entity.Genre;
+import com.fpmislata.domain.userCase.book.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -29,12 +28,12 @@ public class BookAdminController {
     @Value("${app.pageSize.default}")
     private String defaultPageSize;
 
-    private final BookAdminGetAllUseCase bookGetAllUseCase;
-    private final BookAdminCountUseCase bookAdminCountUseCase;
-    private final BookAdminFindByIsbnUseCase bookAdminFindByIsbnUseCase;
-    private final BookAdminInsertAuthorUseCase bookAdminInsertAuthorUseCase;
-    private final BookAdminInsertGenreUseCase bookAdminInsertGenreUseCase;
-    private final BookAdminInsertUseCase bookAdminInsertUseCase;
+    private final BookGetAllUseCase bookGetAllUseCase;
+    private final BookCountUseCase bookAdminCountUseCase;
+    private final BookFindByIsbnUseCase bookAdminFindByIsbnUseCase;
+    private final BookInsertAuthorUseCase bookAdminInsertAuthorUseCase;
+    private final BookInsertGenreUseCase bookAdminInsertGenreUseCase;
+    private final BookInsertUseCase bookAdminInsertUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<BookCollection>> getAll(

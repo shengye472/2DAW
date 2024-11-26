@@ -1,7 +1,7 @@
 package com.fpmislata.persistence.admin.repository.impl;
 
-import com.fpmislata.domain.admin.entity.Publisher;
-import com.fpmislata.domain.admin.repository.PublisherAdminRepository;
+import com.fpmislata.domain.entity.Publisher;
+import com.fpmislata.domain.repository.PublisherRepository;
 import com.fpmislata.persistence.admin.repository.impl.mapper.PublisherRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class PublisherAdminRepositoryImpl implements PublisherAdminRepository {
+public class PublisherAdminRepositoryImpl implements PublisherRepository {
 
     private final JdbcTemplate jdbcTemplate;
 

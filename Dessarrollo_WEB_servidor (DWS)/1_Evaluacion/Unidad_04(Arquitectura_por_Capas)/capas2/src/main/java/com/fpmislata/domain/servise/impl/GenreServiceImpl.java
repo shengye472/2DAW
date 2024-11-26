@@ -1,9 +1,9 @@
-package com.fpmislata.domain.admin.servise.impl;
+package com.fpmislata.domain.servise.impl;
 
 import com.fpmislata.common.annotation.DomainService;
 import com.fpmislata.domain.entity.Genre;
 import com.fpmislata.domain.repository.GenreRepository;
-import com.fpmislata.domain.admin.servise.GenreAdminService;
+import com.fpmislata.domain.servise.GenreService;
 import com.fpmislata.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 @DomainService
 @RequiredArgsConstructor
-public class GenreAdminServiceImpl implements GenreAdminService {
+public class GenreServiceImpl implements GenreService {
 
     private final GenreRepository genreAdminRepository;
 

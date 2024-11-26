@@ -1,16 +1,16 @@
-package com.fpmislata.domain.admin.servise.impl;
+package com.fpmislata.domain.servise.impl;
 
 import com.fpmislata.common.annotation.DomainService;
 import com.fpmislata.domain.entity.Category;
 import com.fpmislata.domain.repository.CategoryRepository;
-import com.fpmislata.domain.admin.servise.CategoryAdminService;
+import com.fpmislata.domain.servise.CategoryService;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Optional;
 
 @DomainService
 @RequiredArgsConstructor
-public class CategoryAdminServiceImpl implements CategoryAdminService {
+public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryAdminRepository;
 
     @Override

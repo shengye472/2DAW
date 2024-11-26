@@ -1,8 +1,8 @@
-package com.fpmislata.domain.admin.userCase.book.impl;
+package com.fpmislata.domain.userCase.book.impl;
 
 import com.fpmislata.common.annotation.DomainUseCase;
 import com.fpmislata.domain.entity.Book;
-import com.fpmislata.domain.admin.userCase.book.BookAdminInsertUseCase;
+import com.fpmislata.domain.userCase.book.BookInsertUseCase;
 import com.fpmislata.domain.exception.ResourceAlreadyExistsException;
 import com.fpmislata.domain.exception.ResourceNotFoundException;
 import com.fpmislata.domain.servise.*;
@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @DomainUseCase
 @RequiredArgsConstructor
-public class BookAdminInsertUseCaseImpl implements BookAdminInsertUseCase {
+public class BookInsertUseCaseImpl implements BookInsertUseCase {
     private final BookService bookAdminService;
     private final AuthorService authorAdminService;
     private final GenreService genreAdminService;

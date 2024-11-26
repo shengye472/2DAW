@@ -1,11 +1,11 @@
 package com.fpmislata.persistence.admin.repository.impl;
 
-import com.fpmislata.domain.admin.entity.Author;
-import com.fpmislata.domain.admin.entity.Book;
-import com.fpmislata.domain.admin.entity.Genre;
-import com.fpmislata.domain.admin.repository.AuthorAdminRepository;
-import com.fpmislata.domain.admin.repository.BookAdminRepository;
-import com.fpmislata.domain.admin.repository.GenreAdminRepository;
+import com.fpmislata.domain.entity.Author;
+import com.fpmislata.domain.entity.Book;
+import com.fpmislata.domain.entity.Genre;
+import com.fpmislata.domain.repository.AuthorRepository;
+import com.fpmislata.domain.repository.BookRepository;
+import com.fpmislata.domain.repository.GenreRepository;
 import com.fpmislata.persistence.admin.repository.impl.mapper.BookRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,12 +19,12 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class BookAdminRepositoryImpl implements BookAdminRepository {
+public class BookAdminRepositoryImpl implements BookRepository {
 
     private final JdbcTemplate jdbcTemplate;
 
-    private final AuthorAdminRepository authorAdminRepository;
-    private final GenreAdminRepository genreAdminRepository;
+    private final AuthorRepository authorRepository;
+    private final GenreRepository genreAdminRepository;
 
 
     @Override
@@ -62,7 +62,7 @@ public class BookAdminRepositoryImpl implements BookAdminRepository {
                 """;
         try {
             Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), isbn);
-            book.setAuthors(authorAdminRepository.getByIsbnBook(isbn));
+            book.setAuthors(authorRepository.getByIsbnBook(isbn));
             book.setGenres(genreAdminRepository.getByIsbnBook(isbn));
             return Optional.of(book);
         } catch (Exception e) {
@@ -80,7 +80,7 @@ public class BookAdminRepositoryImpl implements BookAdminRepository {
                 """;
         try {
             Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), id);
-            book.setAuthors(authorAdminRepository.getByIdBook(id));
+            book.setAuthors(authorRepository.getByIdBook(id));
             book.setGenres(genreAdminRepository.getByIdBook(id));
             return Optional.of(book);
         } catch (Exception e) {

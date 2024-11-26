@@ -1,9 +1,9 @@
-package com.fpmislata.domain.admin.userCase.book;
+package com.fpmislata.domain.userCase.book;
 
 import com.fpmislata.domain.entity.Genre;
 
 import java.util.List;
 
-public interface BookAdminInsertGenreUseCase {
+public interface BookInsertGenreUseCase {
     void insertGenres(Integer id, List<Genre> genres);
 }

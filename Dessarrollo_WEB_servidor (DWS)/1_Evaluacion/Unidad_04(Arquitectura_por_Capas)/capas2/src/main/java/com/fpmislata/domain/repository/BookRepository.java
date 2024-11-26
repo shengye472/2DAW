@@ -1,11 +1,11 @@
-package com.fpmislata.domain.admin.repository;
+package com.fpmislata.domain.repository;
 
 import com.fpmislata.domain.entity.Book;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface BookAdminRepository {
+public interface BookRepository {
     List<Book> getAll();
 
     List<Book> getAll(int page, int size);

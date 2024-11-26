@@ -1,5 +1,5 @@
-package com.fpmislata.domain.admin.userCase.book;
+package com.fpmislata.domain.userCase.book;
 
-public interface BookAdminCountUseCase {
+public interface BookCountUseCase {
     int count();
 }

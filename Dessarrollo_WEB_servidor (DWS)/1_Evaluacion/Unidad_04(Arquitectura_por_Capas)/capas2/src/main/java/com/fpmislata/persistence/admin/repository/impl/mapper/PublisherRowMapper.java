@@ -1,6 +1,6 @@
 package com.fpmislata.persistence.admin.repository.impl.mapper;
 
-import com.fpmislata.domain.admin.entity.Publisher;
+import com.fpmislata.domain.entity.Publisher;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

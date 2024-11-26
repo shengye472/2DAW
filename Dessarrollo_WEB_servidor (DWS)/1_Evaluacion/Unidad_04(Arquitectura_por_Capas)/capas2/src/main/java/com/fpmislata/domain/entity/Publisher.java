@@ -1,4 +1,4 @@
-package com.fpmislata.domain.admin.entity;
+package com.fpmislata.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

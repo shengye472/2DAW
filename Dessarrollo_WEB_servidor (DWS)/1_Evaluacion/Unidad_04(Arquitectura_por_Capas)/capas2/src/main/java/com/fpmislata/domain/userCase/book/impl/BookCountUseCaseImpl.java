@@ -1,13 +1,13 @@
-package com.fpmislata.domain.admin.userCase.book.impl;
+package com.fpmislata.domain.userCase.book.impl;
 
 import com.fpmislata.common.annotation.DomainUseCase;
 import com.fpmislata.domain.servise.BookService;
-import com.fpmislata.domain.admin.userCase.book.BookAdminCountUseCase;
+import com.fpmislata.domain.userCase.book.BookCountUseCase;
 import lombok.RequiredArgsConstructor;
 
 @DomainUseCase
 @RequiredArgsConstructor
-public class BookAdminCountUseCaseImpl implements BookAdminCountUseCase {
+public class BookCountUseCaseImpl implements BookCountUseCase {
 
     private final BookService bookAdminService;
 

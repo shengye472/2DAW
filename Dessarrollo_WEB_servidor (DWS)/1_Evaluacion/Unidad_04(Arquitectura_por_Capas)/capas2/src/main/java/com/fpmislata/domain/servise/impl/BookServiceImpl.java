@@ -1,4 +1,4 @@
-package com.fpmislata.domain.admin.servise.impl;
+package com.fpmislata.domain.servise.impl;
 
 import com.fpmislata.common.annotation.DomainService;
 import com.fpmislata.domain.entity.Author;
@@ -6,7 +6,7 @@ import com.fpmislata.domain.entity.Book;
 import com.fpmislata.domain.entity.Genre;
 import com.fpmislata.domain.repository.AuthorRepository;
 import com.fpmislata.domain.repository.GenreRepository;
-import com.fpmislata.domain.admin.servise.BookAdminService;
+import com.fpmislata.domain.servise.BookService;
 import com.fpmislata.domain.exception.ResourceAlreadyExistsException;
 import com.fpmislata.domain.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @DomainService
 @RequiredArgsConstructor
-public class BookAdminServiceImpl implements BookAdminService {
+public class BookServiceImpl implements BookService {
     private final BookRepository bookAdminRepository;
     private final AuthorRepository authorRepository;
     private final GenreRepository genreAdminRepository;

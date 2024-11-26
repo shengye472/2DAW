@@ -1,9 +1,9 @@
-package com.fpmislata.domain.admin.servise.impl;
+package com.fpmislata.domain.servise.impl;
 
 import com.fpmislata.common.annotation.DomainService;
 import com.fpmislata.domain.entity.Author;
 import com.fpmislata.domain.repository.AuthorRepository;
-import com.fpmislata.domain.admin.servise.AuthorAdminService;
+import com.fpmislata.domain.servise.AuthorService;
 import com.fpmislata.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 @DomainService
 @RequiredArgsConstructor
-public class AuthorAdminServiceImpl implements AuthorAdminService {
+public class AuthorServiceImpl implements AuthorService {
 
     private final AuthorRepository authorRepository;
 

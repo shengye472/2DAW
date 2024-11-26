@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 @Data
@@ -21,4 +22,12 @@ public class Book {
     private Category category;
     private List<Author> authors;
     private List<Genre> genres;
+
+
+    public void setPrice(BigDecimal price) {
+        if (price == null) {
+            price = new BigDecimal(0);
+        }
+        this.price = price.setScale(2, RoundingMode.HALF_UP);
+    }
 }

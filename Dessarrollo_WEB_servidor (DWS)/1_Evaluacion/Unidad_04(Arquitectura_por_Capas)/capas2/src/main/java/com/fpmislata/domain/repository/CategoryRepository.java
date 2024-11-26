@@ -1,9 +1,9 @@
-package com.fpmislata.domain.admin.repository;
+package com.fpmislata.domain.repository;
 
 import com.fpmislata.domain.entity.Category;
 
 import java.util.Optional;
 
-public interface CategoryAdminRepository {
+public interface CategoryRepository {
     Optional<Category> findById(long id);
 }

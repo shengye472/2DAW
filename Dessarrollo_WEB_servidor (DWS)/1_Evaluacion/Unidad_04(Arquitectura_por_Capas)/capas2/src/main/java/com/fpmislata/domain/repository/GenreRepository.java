@@ -1,10 +1,10 @@
-package com.fpmislata.domain.admin.repository;
+package com.fpmislata.domain.repository;
 
 import com.fpmislata.domain.entity.Genre;
 
 import java.util.List;
 
-public interface GenreAdminRepository {
+public interface GenreRepository {
     List<Genre> getByIsbnBook(String isbn);
 
     List<Genre> getByIdBook(long id);

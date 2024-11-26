@@ -1,10 +1,10 @@
-package com.fpmislata.domain.admin.repository;
+package com.fpmislata.domain.repository;
 
 import com.fpmislata.domain.entity.Author;
 
 import java.util.List;
 
-public interface AuthorAdminRepository {
+public interface AuthorRepository {
     List<Author> getByIsbnBook(String isbn);
 
     List<Author> getByIdBook(long id);

@@ -1,15 +1,15 @@
-package com.fpmislata.domain.admin.userCase.book.impl;
+package com.fpmislata.domain.userCase.book.impl;
 
 import com.fpmislata.common.annotation.DomainUseCase;
 import com.fpmislata.domain.entity.Book;
 import com.fpmislata.domain.servise.BookService;
-import com.fpmislata.domain.admin.userCase.book.BookAdminFindByIsbnUseCase;
+import com.fpmislata.domain.userCase.book.BookFindByIsbnUseCase;
 import com.fpmislata.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 
 @DomainUseCase
 @RequiredArgsConstructor
-public class BookAdminFindByIsbnUseCaseImpl implements BookAdminFindByIsbnUseCase {
+public class BookFindByIsbnUseCaseImpl implements BookFindByIsbnUseCase {
 
     private final BookService bookAdminService;
 
