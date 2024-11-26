@@ -4,9 +4,10 @@ import com.fpmislata.controller.common.PaginatedResponse;
 import com.fpmislata.controller.user.webModel.entity.book.BookCollection;
 import com.fpmislata.controller.user.webModel.entity.book.BookDetail;
 import com.fpmislata.controller.user.webModel.mapper.bookMapper.BookMapper;
-import com.fpmislata.domain.userCase.book.BookCountUseCase;
-import com.fpmislata.domain.userCase.book.BookFindByIsbnUseCase;
-import com.fpmislata.domain.userCase.book.BookGetAllUseCase;
+import com.fpmislata.domain.user.service.BookUserService;
+import com.fpmislata.domain.user.useCase.book.BookUserCountUseCase;
+import com.fpmislata.domain.user.useCase.book.BookUserGetAllUseCase;
+import com.fpmislata.domain.user.useCase.book.impl.BookUserFindByIdUseCaseImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -27,29 +28,21 @@ public class BookUserController {
     @Value("${app.pageSize.default}")
     private String defaultPageSize;
 
-    private final BookGetAllUseCase bookGetAllUseCase;
-    private final BookCountUseCase bookCountUseCase;
-    private final BookFindByIsbnUseCase bookFindByIsbnUseCase;
+    private final BookUserGetAllUseCase bookUserGetAllUseCase;
+    private final BookUserCountUseCase bookUserCountUseCase;
+    private final BookUserFindByIdUseCaseImpl bookUserFindByIdUseCase;
 
     @GetMapping
-//    public ResponseEntity<List<BookCollection>> getAll(){
-//        List<BookCollection> bookCollections = bookService
-//                .getAll()
-//                .stream()
-//                .map(BookMapper.INSTANCE::toBookCollection)
-//                .toList();
-//        return new ResponseEntity<>(bookCollections, HttpStatus.OK);
-//    }
     public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(required = false) Integer size){
         int pageSize = (size != null) ? size : Integer.parseInt(defaultPageSize);
-        List<BookCollection> bookCollections = bookGetAllUseCase
+        List<BookCollection> bookCollections = bookUserGetAllUseCase
                 .getAll(page - 1, pageSize)
                 .stream()
                 .map(BookMapper.INSTANCE::toBookCollection)
                 .toList();
-        int total = bookCountUseCase.count();
+        int total = bookUserCountUseCase.count();
 
         PaginatedResponse<BookCollection> response = new PaginatedResponse<>(bookCollections, total, page, pageSize, baseUrl + URL);
         return new ResponseEntity<>(response,HttpStatus.OK);
@@ -57,7 +50,7 @@ public class BookUserController {
 
     @GetMapping("/{isbn}")
     public ResponseEntity<BookDetail> findByIsbn(@PathVariable String isbn){
-        BookDetail bookDetail = BookMapper.INSTANCE.toBookDetail(bookFindByIsbnUseCase.findByIsbn(isbn));
+        BookDetail bookDetail = BookMapper.INSTANCE.toBookDetail(bookUserFindByIdUseCase.findByIsbn(isbn));
         return new ResponseEntity<>(bookDetail,HttpStatus.OK);
     }
 }

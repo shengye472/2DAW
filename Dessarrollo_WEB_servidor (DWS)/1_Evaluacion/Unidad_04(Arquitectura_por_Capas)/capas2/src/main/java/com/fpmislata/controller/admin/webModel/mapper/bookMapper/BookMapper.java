@@ -1,7 +1,7 @@
 package com.fpmislata.controller.admin.webModel.mapper.bookMapper;
 
 import com.fpmislata.controller.admin.webModel.entity.book.BookCollection;
-import com.fpmislata.domain.entity.Book;
+import com.fpmislata.domain.admin.entity.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

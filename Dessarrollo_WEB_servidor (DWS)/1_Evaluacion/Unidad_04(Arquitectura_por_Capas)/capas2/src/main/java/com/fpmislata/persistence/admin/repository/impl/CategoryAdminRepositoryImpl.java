@@ -1,7 +1,7 @@
 package com.fpmislata.persistence.admin.repository.impl;
 
-import com.fpmislata.domain.entity.Category;
-import com.fpmislata.domain.repository.CategoryRepository;
+import com.fpmislata.domain.admin.entity.Category;
+import com.fpmislata.domain.admin.repository.CategoryAdminRepository;
 import com.fpmislata.persistence.admin.repository.impl.mapper.CategoryRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class CategoryAdminRepositoryImpl implements CategoryRepository {
+public class CategoryAdminRepositoryImpl implements CategoryAdminRepository {
     private final JdbcTemplate jdbcTemplate;
 
     @Override

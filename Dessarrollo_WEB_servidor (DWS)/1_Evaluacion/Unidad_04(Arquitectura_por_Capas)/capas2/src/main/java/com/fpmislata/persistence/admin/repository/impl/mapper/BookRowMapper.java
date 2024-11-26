@@ -1,6 +1,6 @@
 package com.fpmislata.persistence.admin.repository.impl.mapper;
 
-import com.fpmislata.domain.entity.Book;
+import com.fpmislata.domain.admin.entity.Book;
 import com.fpmislata.persistence.common.CustomRowMapper;
 
 import java.math.BigDecimal;

@@ -1,7 +1,7 @@
 package com.fpmislata.persistence.admin.repository.impl;
 
-import com.fpmislata.domain.entity.Genre;
-import com.fpmislata.domain.repository.GenreRepository;
+import com.fpmislata.domain.admin.entity.Genre;
+import com.fpmislata.domain.admin.repository.GenreAdminRepository;
 import com.fpmislata.persistence.admin.repository.impl.mapper.GenreRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Repository
 @RequiredArgsConstructor
-public class GenreAdminRepositoryImpl implements GenreRepository {
+public class GenreAdminRepositoryImpl implements GenreAdminRepository {
 
     private final JdbcTemplate jdbcTemplate;
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
