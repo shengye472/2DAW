@@ -29,20 +29,25 @@ if + present simple, present simple.
 
 Refer to facts and things that always happen
 
+- **If** you **heat** water to 100ºC,it **boils**.
 ### First Conditional
-if + present simple, would + infinitive.
+if + present simple, will + infinitive.
 
 Refer to things that might happen in the future
 
+- **If** they **go** to China, we **will visit** them.
 ### Second Conditional	
-if + past simple, will + infinitive.
+if + past simple, would + infinitive.
 
 Refer to things that are unlikely to happen
 
+- **If** I **won** the lottery, I **would buy** a new car.
 ### Third Conditional
 if + past perfect, would have + past participle.
 
 Refer to things that did not happen
+
+- **If** I **had studied** more, I **would have passed** the exam.
 
 # Unit 8
 ## Vocabulary
