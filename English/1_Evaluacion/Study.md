@@ -5,7 +5,7 @@
 |:-----------|:-----------|:-----------|:-----------|
 |Adware|Software publicitario|Phishing|Suplantación de identidad|
 |Antivirus Software|Antivirus|Piracy|Piratería|
-|Craker|Pirata informático|Prevent|Prevenir|
+|Cracker|Pirata informático|Prevent|Prevenir|
 |Cookies|Cookies|Protect|Proteger|
 |Cybercrime|Ciberdelito|Reliable|Confiable|
 |Cyberstalking|Ciberacoso|Risk|Riesgo|
