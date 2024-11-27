@@ -5,7 +5,7 @@ import com.fpmislata.controller.user.webModel.entity.book.BookDetail;
 import com.fpmislata.controller.user.webModel.mapper.authorMapper.AuthorMapper;
 import com.fpmislata.controller.user.webModel.mapper.genreMapper.GenreMapper;
 import com.fpmislata.controller.user.webModel.mapper.publisherMapper.PublisherMapper;
-import com.fpmislata.domain.user.entity.Book;
+import com.fpmislata.domain.entity.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

@@ -4,11 +4,11 @@ package com.fpmislata.controller.admin;
 import com.fpmislata.controller.admin.webModel.entity.book.BookCollection;
 import com.fpmislata.controller.admin.webModel.mapper.bookMapper.BookMapper;
 import com.fpmislata.controller.common.PaginatedResponse;
-import com.fpmislata.domain.admin.entity.Author;
-import com.fpmislata.domain.admin.entity.Book;
-import com.fpmislata.domain.admin.entity.Genre;
-import com.fpmislata.domain.admin.servise.BookAdminService;
-import com.fpmislata.domain.admin.userCase.book.*;
+import com.fpmislata.domain.entity.Author;
+import com.fpmislata.domain.entity.Book;
+import com.fpmislata.domain.entity.Genre;
+import com.fpmislata.domain.useCase.book.admin.*;
+import com.fpmislata.domain.useCase.book.common.BookCountUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -29,12 +29,12 @@ public class BookAdminController {
     @Value("${app.pageSize.default}")
     private String defaultPageSize;
 
-    private final BookAdminGetAllUseCase bookGetAllUseCase;
-    private final BookAdminCountUseCase bookAdminCountUseCase;
-    private final BookAdminFindByIsbnUseCase bookAdminFindByIsbnUseCase;
-    private final BookAdminInsertAuthorUseCase bookAdminInsertAuthorUseCase;
-    private final BookAdminInsertGenreUseCase bookAdminInsertGenreUseCase;
-    private final BookAdminInsertUseCase bookAdminInsertUseCase;
+    private final BookGetAllAdminUseCase bookGetAllUseCase;
+    private final BookCountUseCase bookCountUseCase;
+    private final BookFindByIsbnAdminUseCase bookFindByIsbnUseCase;
+    private final BookInsertAuthorUseCase bookInsertAuthorUseCase;
+    private final BookInsertGenreUseCase bookInsertGenreUseCase;
+    private final BookInsertUseCase bookInsertUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
@@ -46,7 +46,7 @@ public class BookAdminController {
                 .stream()
                 .map(BookMapper.INSTANCE::toBookCollection)
                 .toList();
-        int total = bookAdminCountUseCase.count();
+        int total = bookCountUseCase.count();
 
         PaginatedResponse<BookCollection> response = new PaginatedResponse<>(books, (int) total, page, pageSize, baseUrl + URL);
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -54,25 +54,25 @@ public class BookAdminController {
 
     @GetMapping("/{isbn}")
     public ResponseEntity<Book> findByIsbn(@PathVariable String isbn) {
-        Book book = bookAdminFindByIsbnUseCase.findByIsbn(isbn);
+        Book book = bookFindByIsbnUseCase.findByIsbn(isbn);
         return new ResponseEntity<>(book, HttpStatus.OK);
     }
 
     @PostMapping("/{id}/authors")
     public ResponseEntity<Void> insertAuthors(@PathVariable Integer id, @RequestBody List<Author> authors){
-        bookAdminInsertAuthorUseCase.insertAuthors(id,authors);
+        bookInsertAuthorUseCase.insertAuthors(id,authors);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PostMapping("/{id}/generes")
     public ResponseEntity<Void> insertGeneres(@PathVariable Integer id, @RequestBody List<Genre> genres){
-        bookAdminInsertGenreUseCase.insertGenres(id,genres);
+        bookInsertGenreUseCase.insertGenres(id,genres);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PostMapping
     public ResponseEntity<Void> insertBook(@RequestBody Book book){
-        bookAdminInsertUseCase.insertBook(book);
+        bookInsertUseCase.insertBook(book);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }

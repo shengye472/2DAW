@@ -1,6 +1,6 @@
 package com.fpmislata.controller.user.webModel.mapper.genreMapper;
 
-import com.fpmislata.domain.user.entity.Genre;
+import com.fpmislata.domain.entity.Genre;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

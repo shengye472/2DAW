@@ -1,7 +1,7 @@
 package com.fpmislata.controller.user.webModel.mapper.authorMapper;
 
 import com.fpmislata.controller.user.webModel.entity.author.AuthorCollection;
-import com.fpmislata.domain.user.entity.Author;
+import com.fpmislata.domain.entity.Author;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

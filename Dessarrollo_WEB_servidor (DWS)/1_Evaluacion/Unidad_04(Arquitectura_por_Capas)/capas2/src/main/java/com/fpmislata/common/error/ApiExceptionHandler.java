@@ -1,6 +1,6 @@
 package com.fpmislata.common.error;
 
-import com.fpmislata.domain.exception.ResourceNotFoundException;
+import com.fpmislata.common.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
