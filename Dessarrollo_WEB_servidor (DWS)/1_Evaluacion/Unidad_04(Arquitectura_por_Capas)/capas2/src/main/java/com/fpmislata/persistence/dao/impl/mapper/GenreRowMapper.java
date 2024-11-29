@@ -1,4 +1,4 @@
-package com.fpmislata.persistence.repository.impl.mapper;
+package com.fpmislata.persistence.dao.impl.mapper;
 
 import com.fpmislata.domain.entity.Genre;
 import org.springframework.jdbc.core.RowMapper;

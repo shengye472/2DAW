@@ -1,4 +1,4 @@
-package com.fpmislata.persistence.repository.impl.mapper;
+package com.fpmislata.persistence.dao.impl.mapper;
 
 import com.fpmislata.domain.entity.Book;
 

@@ -2,9 +2,8 @@ package com.fpmislata.persistence.repository.impl;
 
 import com.fpmislata.domain.entity.Publisher;
 import com.fpmislata.domain.repository.PublisherRepository;
-import com.fpmislata.persistence.repository.impl.mapper.PublisherRowMapper;
+import com.fpmislata.persistence.dao.PublisherDao;
 import lombok.RequiredArgsConstructor;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -13,18 +12,10 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PublisherRepositoryImpl implements PublisherRepository {
 
-    private final JdbcTemplate jdbcTemplate;
+    private final PublisherDao publisherDao;
 
     @Override
     public Optional<Publisher> findById(long id) {
-        String sql = """
-                SELECT * FROM publishers
-                WHERE id = ?
-                """;
-        try {
-            return Optional.of(jdbcTemplate.queryForObject(sql, new PublisherRowMapper(),id));
-        } catch (Exception e) {
-            return Optional.empty();
-        }
+        return publisherDao.findById(id);
     }
 }
