@@ -3,6 +3,10 @@
 "./01_utilities/variables_sass",
 "./01_utilities/variables_css";
 
+/* 02 Base*/
+@import
+"./02_base/reset";
+
 /* 06 Global*/
 @import 
 "./06_global/g--padding.scss",
@@ -13,4 +17,6 @@
 "./06_global/g--border.scss",
 "./06_global/g--shadow.scss",
 "./06_global/g--colors.scss",
-"./06_global/g--background.scss";
+"./06_global/g--background.scss",
+"./06_global/g--fonts.scss",
+"./06_global/g--text-align.scss";

@@ -1,0 +1,34 @@
+:root {
+    /*Colors*/
+    /*Natural*/
+    @each $name, $value in $neutral{
+        --neutral-#{$name}: #{$value};
+    }
+
+    /*Red*/
+    @each $name, $value in $red{
+        --red-#{$name}: #{$value};
+    }
+
+    /*Yellow*/
+    @each $name, $value in $yellow{
+        --yellow-#{$name}: #{$value};
+    }
+
+    /*Lime*/
+    @each $name, $value in $lime{
+        --lime-#{$name}: #{$value};
+    }
+    /*Border-Radius*/
+    @each $name, $value in $border-radius{
+        --border-radius-#{$name}: #{$value};
+    }
+    /*Padding*/
+    @each $name, $value in $padding{
+        --padding-#{$name}: #{$value};
+    }
+    /*Font-size*/
+    @each $name, $value in $font-size{
+        --font-size-#{$name}: #{$value};
+    }
+}

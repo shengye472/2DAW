@@ -1,0 +1,31 @@
+/*01 Utilities*/
+/*02 Base*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*04 Components*/
+.c-menu {
+  display: flex;
+}
+.c-menu__item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.c-menu__item-auto {
+  margin: auto;
+}
+.c-menu__item-auto-left {
+  margin-left: auto;
+}
+.c-menu__item-auto-right {
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

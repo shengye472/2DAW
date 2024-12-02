@@ -1,0 +1,18 @@
+.c-menu {
+    display: flex;
+    &__item {
+        @include margin-horizontal(10px);
+
+        &-auto {
+            margin: auto;
+
+            &-left {
+                margin-left: auto;
+            }
+            &-right {
+                margin-right: auto;
+            }
+        }
+
+    }
+}

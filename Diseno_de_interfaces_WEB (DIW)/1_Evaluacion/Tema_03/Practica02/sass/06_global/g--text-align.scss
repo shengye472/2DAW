@@ -1,0 +1,7 @@
+g--text-align{
+    @each $name, $value in $text-align{
+        &-#{$name}{
+            text-align: var(--text-aling-#{$name});
+        }
+    }
+}

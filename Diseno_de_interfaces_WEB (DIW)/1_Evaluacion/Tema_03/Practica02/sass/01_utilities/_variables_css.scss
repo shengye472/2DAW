@@ -82,4 +82,14 @@
         --background-#{$name}: #{$value};
     }
 
+
+    /*fonts*/
+    @each $name, $value in $fonts{
+        --font-#{$name}: #{$value};
+    }
+
+    /*text-aling*/
+    @each $name in $text-align{
+        --text-align-#{$name}: #{$name};
+    }
 }

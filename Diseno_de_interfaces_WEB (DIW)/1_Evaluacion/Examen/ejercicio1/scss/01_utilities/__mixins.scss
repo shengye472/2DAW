@@ -1,0 +1,17 @@
+@mixin medidor-size($font-size, $padding-horizontal, $padding-vertical){
+    font-size: $font-size;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
+}
+
+@mixin border-radius-right($radius){
+    border-top-right-radius: var($radius);
+        border-bottom-right-radius: var($radius);
+}
+
+@mixin border-radius-left($radius){
+    border-top-left-radius: var($radius);
+    border-bottom-left-radius: var($radius);
+}

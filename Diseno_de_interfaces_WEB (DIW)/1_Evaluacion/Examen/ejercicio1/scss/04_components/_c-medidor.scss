@@ -1,0 +1,98 @@
+.c-medidor{
+    --c-medidor-color-cpu: var(--neutral-600);
+    --c-medidor-color-red: var(--red-600);
+    --c-medidor-color-yellow: var(--yellow-400);
+    --c-medidor-color-lime: var(--lime-500);
+
+    --c-medidor-font-size-s: var(--font-size-16);
+    --c-medidor-font-size-m: var(--font-size-20);
+
+    --c-medidor-border-radius: var(--border-radius-12);
+
+    --c-medidor-padding-horizontal-s: var(--padding-16);
+    --c-medidor-padding-horizontal-m: var(--padding-20);
+
+    --c-medidor-padding-vertical-s: var(--padding-8);
+    --c-medidor-padding-vertical-m: var(--padding-10);
+
+    display: inline;
+
+    &-size{
+        &-s{
+            @include medidor-size(var(--c-medidor-font-size-s), var(--c-medidor-padding-horizontal-s), var(--c-medidor-padding-vertical-s));
+        }
+        &-m{
+            @include medidor-size(var(--c-medidor-font-size-m), var(--c-medidor-padding-horizontal-m), var(--c-medidor-padding-vertical-m));
+        }
+    }
+    &--neutral{
+        background-color: var(--c-medidor-color-cpu);
+        @include border-radius-left(--c-medidor-border-radius);
+    }
+    &--success{
+        background-color: var(--c-medidor-color-lime);
+        @include border-radius-right(--c-medidor-border-radius);
+    }
+    &--warning{
+        background-color: var(--c-medidor-color-yellow);
+        @include border-radius-right(--c-medidor-border-radius);
+    }
+    &--danger{
+        background-color: var(--c-medidor-color-red);
+        @include border-radius-right(--c-medidor-border-radius);
+    }
+
+    //Versiones anteriores
+    
+    // &-neutral{
+    //     &-s{
+    //         background-color: var(--c-medidor-color-cpu);
+    //         @include medidor-size(var(--c-medidor-font-size-s), var(--c-medidor-padding-horizontal-s), var(--c-medidor-padding-vertical-s));
+    //         @include border-radius-left(--c-medidor-border-radius);
+    //     }
+    //     &-m{
+    //         background-color: var(--c-medidor-color-cpu);
+    //         @include medidor-size(var(--c-medidor-font-size-m), var(--c-medidor-padding-horizontal-m), var(--c-medidor-padding-vertical-m));
+    //         @include border-radius-left(--c-medidor-border-radius);
+    //     }
+    // }
+
+    // &-success{
+    //     &-s{
+    //         background-color: var(--c-medidor-color-lime);
+    //         @include medidor-size(var(--c-medidor-font-size-s), var(--c-medidor-padding-horizontal-s), var(--c-medidor-padding-vertical-s));
+    //         @include border-radius-right(--c-medidor-border-radius);
+    //     }
+    //     &-m{
+    //         background-color: var(--c-medidor-color-lime);
+    //         @include medidor-size(var(--c-medidor-font-size-m), var(--c-medidor-padding-horizontal-m), var(--c-medidor-padding-vertical-m));
+    //         @include border-radius-right(--c-medidor-border-radius);
+    //     }
+    // }
+
+    // &-warning{
+    //     &-s{
+    //         background-color: var(--c-medidor-color-yellow);
+    //         @include medidor-size(var(--c-medidor-font-size-s), var(--c-medidor-padding-horizontal-s), var(--c-medidor-padding-vertical-s));
+    //         @include border-radius-right(--c-medidor-border-radius);
+    //     }
+    //     &-m{
+    //         background-color: var(--c-medidor-color-yellow);
+    //         @include medidor-size(var(--c-medidor-font-size-m), var(--c-medidor-padding-horizontal-m), var(--c-medidor-padding-vertical-m));
+    //         @include border-radius-right(--c-medidor-border-radius);
+    //     }
+    // }
+
+    // &-danger{
+    //     &-s{
+    //         background-color: var(--c-medidor-color-red);
+    //         @include medidor-size(var(--c-medidor-font-size-s), var(--c-medidor-padding-horizontal-s), var(--c-medidor-padding-vertical-s));
+    //         @include border-radius-right(--c-medidor-border-radius);
+    //     }
+    //     &-m{
+    //         background-color: var(--c-medidor-color-red);
+    //         @include medidor-size(var(--c-medidor-font-size-m), var(--c-medidor-padding-horizontal-m), var(--c-medidor-padding-vertical-m));
+    //         @include border-radius-right(--c-medidor-border-radius);
+    //     }
+    // }
+}

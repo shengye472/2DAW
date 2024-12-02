@@ -1,0 +1,57 @@
+$utilities: (
+    "propiedades":((width, a, a, 1),
+        (padding, b, a, 0),
+        (margin, a, b, 1)),
+    "keys":("a":(10, 20, 30, 40, 50),
+        "b":(xs, s, m, l, xl)),
+    "values":("a":(2px, 4px, 8px, 16px, 20px),
+        "b":(10%, 20%, 30%, 40%, 50%))
+);
+
+
+
+$propiedades: map-get($map: $utilities, $key: "propiedades");
+
+@for $i from 1 through length($propiedades) {
+    $value: nth($list: $propiedades , $n: $i );
+    $class: nth($value, 1);
+    $keyoption: nth($value, 2);
+    $valuesoption: nth($value, 3);
+    $option: nth($value, 4);
+
+    $keys: map-get($map: $utilities, $key: "keys");
+    $values: map-get($map: $utilities, $key: "values");
+    $keyvalues: map-get($map: $keys, $key: $keyoption);
+    $valuesvalues: map-get($map: $values, $key: $valuesoption);
+
+    @if $option ==0 {
+        @for $j from 1 through length($keyvalues) {
+            $key: nth($list: $keyvalues , $n: $j );
+            $value: nth($list: $valuesvalues , $n: $j );
+
+            @if $key =="m" {
+                .g--#{$class} {
+                    #{$class}: #{$value};
+                }
+            }
+
+            @else {
+                .g--#{$class}-#{$key} {
+                    #{$class}: #{$value};
+                }
+            }
+        }
+    }
+
+    @else if $option ==1 {
+        @for $j from 1 through length($keyvalues) {
+            $key: nth($list: $keyvalues , $n: $j );
+            $value: nth($list: $valuesvalues , $n: $j );
+
+            .g--#{$class}-#{$key} {
+                #{$class}: #{$value};
+            }
+
+        }
+    }
+}

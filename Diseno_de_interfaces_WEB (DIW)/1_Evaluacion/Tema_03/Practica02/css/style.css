@@ -314,6 +314,29 @@
   --background-color-grey-80: #e5e7eb;
   --background-color-grey-90: #f3f4f6;
   --background-none: none;
+  /*fonts*/
+  --font-arial: 'Arial, sans-serif';
+  --font-verdana: 'Verdana, sans-serif';
+  --font-tahoma: 'Tahoma, sans-serif';
+  --font-trebuchet: 'Trebuchet MS, sans-serif';
+  --font-timesNewRoman: 'Times New Roman, serif';
+  --font-georgia: 'Georgia, serif';
+  --font-garamond: 'Garamond, serif';
+  --font-courier: 'Courier New, monospace';
+  --font-brushScript: 'Brush Script MT, cursive';
+  /*text-aling*/
+  --text-align-left: left;
+  --text-align-center: center;
+  --text-align-right: right;
+}
+
+/* 02 Base*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 /* 06 Global*/
@@ -1800,6 +1823,45 @@ g--background-grey-90 {
   background-color: #f3f4f6;
 }
 g--background-none {
+  background: var(--background-none);
+}
+
+g--fonts-arial {
+  font-family: var(--font-arial);
+}
+g--fonts-verdana {
+  font-family: var(--font-verdana);
+}
+g--fonts-tahoma {
+  font-family: var(--font-tahoma);
+}
+g--fonts-trebuchet {
+  font-family: var(--font-trebuchet);
+}
+g--fonts-timesNewRoman {
+  font-family: var(--font-timesNewRoman);
+}
+g--fonts-georgia {
+  font-family: var(--font-georgia);
+}
+g--fonts-garamond {
+  font-family: var(--font-garamond);
+}
+g--fonts-courier {
+  font-family: var(--font-courier);
+}
+g--fonts-brushScript {
+  font-family: var(--font-brushScript);
+}
+
+g--text-align-left {
+  text-align: var(--text-aling-left);
+}
+g--text-align-center {
+  text-align: var(--text-aling-center);
+}
+g--text-align-right {
+  text-align: var(--text-aling-right);
 }
 
 /*# sourceMappingURL=style.css.map */
