@@ -84,6 +84,7 @@ function insert() {
         let price = formNuevo.precio.value
         let option = {
             method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ "id": id, "nombre": name, "precio": price })
         }
         fetch(url, option)
@@ -128,9 +129,9 @@ function setData(data) {
 }
 
 function update() {
-    const id = formNuevo.id.value
-    const name = formNuevo.nombre.value
-    const price = formNuevo.precio.value
+    const id = formMod.id.value
+    const name = formMod.nombre.value
+    const price = formMod.precio.value
     let option = {
         method: "PUT",
         headers: {
