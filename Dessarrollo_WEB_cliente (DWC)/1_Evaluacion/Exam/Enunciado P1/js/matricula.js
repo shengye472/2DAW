@@ -8,7 +8,7 @@ window.onload = () => {
 function verAsignatura() {
     let contenedor = document.getElementById("contenedor");
     contenedor.innerHTML = "";
-    let result
+    let result = "";
     modulos.forEach(modulo => {
         result += pintarAsignatura(modulo);
     })
