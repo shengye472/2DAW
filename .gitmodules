@@ -7,3 +7,6 @@
 [submodule "Despliegue_de_Aplicaciones_WEB (DAW)/1_Evaluacion/Tema_02/class-test"]
 	path = Despliegue_de_Aplicaciones_WEB (DAW)/1_Evaluacion/Tema_02/class-test
 	url = https://github.com/david13penalver/class-test
+[submodule "Despliegue_de_Aplicaciones_WEB (DAW)/2_Evaluacion/Tema_06(Despliegue Automatizado)/Ejercicio_Clase"]
+	path = Despliegue_de_Aplicaciones_WEB (DAW)/2_Evaluacion/Tema_06(Despliegue Automatizado)/Ejercicio_Clase
+	url = https://github.com/shengye472/DAWEjercicioAutomatizacion
