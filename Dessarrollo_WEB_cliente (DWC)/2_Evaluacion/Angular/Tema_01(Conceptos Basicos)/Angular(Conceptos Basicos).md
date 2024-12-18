@@ -1,43 +1,191 @@
 # Índice
-1. Qué es Angular
-2. Alternativas a Angular
-3. Instalación de Angular
-4. Creación y Ejecución de un Proyecto
-5. Live reload
-6. Scaffolding en Angular
-    6.1. Raiz de un Proyecto
-    6.2. Carpetas .angular
-    6.3. Carpetas .vscode
-    6.4. Carpetas node_modules
-    6.5. Carpetas src
-        6.5.1 Carpeta app
-        6.5.2. Carpeta assets
-7. Modo producción
+1. [Qué es Angular](#qué-es-angular)
+2. [Alternativas a Angular](#alternativas-a-angular)
+3. [Instalación de Angular](#instalación-de-angular)
+4. [Creación y Ejecución de un Proyecto](#creación-y-ejecución-de-un-proyecto)
+5. [Live reload](#live-reload)
+6. [Scaffolding en Angular](#scaffolding-en-angular)
+    6.1. [Raiz de un Proyecto](#raiz-de-un-proyecto)
+    6.2. [Carpetas .angular](#carpetas-angular)
+    6.3. [Carpetas .vscode](#carpetas-vscode)
+    6.4. [Carpetas node_modules](#carpetas-node_modules)
+    6.5. [Carpetas src](#carpetas-src)
+        6.5.1 [Carpeta app](#carpeta-app)
+        6.5.2. [Carpeta assets](#carpeta-assets)
+7. [Modo producción](#modo-producción)
 
-# Qué es Angular
 
-# Alternativas a Angular
+# Qué es Angular <a href="#índice" style="font-size: 15px;">Up</a>
+Angular es un framework JavaScript, construido sobre TypeScript para crear aplicaciones web SPA (Single Page Application).
 
-# Instalación de Angular
+***Principales ventajas de Angular:***
 
-# Creación y Ejecución de un Proyecto
+- `Modularidad`: Facilita la organización y el mantenimiento del código.
 
-# Live reload
+- `Enrutamiento`: Permite la navegación entre las diferentes vistas de la aplicación.
 
-# Scaffolding en Angular
+- `Data Binding`: Conecta la interfaz de usuario con los datos de la aplicación de manera eficiente.
 
-## Raiz de un Proyecto
+- `Directivas`: Permite modificar el comportamiento de los elementos del HTML/DOM.
 
-## Carpetas .angular
+- `Inyección de dependencias`: Simplifica la gestión de dependencias en componentes y servicios.
 
-## Carpetas .vscode
+- `Testing`: Incluye herramientas integradas para pruebas.
 
-## Carpetas node_modules
+***Angular incluye:***
 
-## Carpetas src
+- Un marco basado en componentes para construir aplicaciones escalables.
 
-### Carpeta app
+- Bibliotecas integradas para funciones clave como enrutamiento, formularios y comunicación cliente-servidor.
 
-### Carpeta assets
+- Herramientas de desarrollo para crear, probar y actualizar proyecto.
 
-# Modo producción
+Angular se adapta desde pequeños proyectos hasta aplicaciones empresariales, respaldado por una comunidad activa de más de 1,7 millones de desarrolladores y creadores de contenido.
+
+# Alternativas a Angular <a href="#índice" style="font-size: 15px;">Up</a>
+
+ - **React**
+
+ - **Vue**
+
+# Instalación de Angular <a href="#índice" style="font-size: 15px;">Up</a>
+
+Para instalar Angular, es necesario tener primero instalado Node.js y npm. Luego instalamos Angular CLI, es necesario instalarlo de forma global en el sistema. 
+
+```bash
+<!-- Instalar Angular CLI -->
+npm install -g @angular/cli
+
+<!-- Verificar la versión de Angular CLI -->
+ng --version
+```
+
+El CLI de Angular es una herramienta clave que automatiza tareas comunes del desarrollo, permitiendo interactuar con Angular desde la terminal.
+
+***Funciones principales de Angular CLI:***
+
+- Crear un nuevo proyecto.
+
+- Generar componentes, servicios, directivas, etc.
+
+- Dessarrollar localmente.
+
+- Compila y optimiza la aplicación.
+
+- Ejecutar pruebas unitarias y de extremo a extremo.
+
+# Creación y Ejecución de un Proyecto <a href="#índice" style="font-size: 15px;">Up</a>
+
+- Con comando `ng`
+
+```bash
+<!-- Crear un nuevo proyecto -->
+ng new nombre_proyecto
+
+<!-- Iniciar el servidor de desarrollo -->
+ng serve --open
+```
+
+- Con comando `npm`
+
+```bash
+"scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve:ssr:my-app": "node dist/my-app/server/server.mjs"
+}
+```
+
+# Live reload <a href="#índice" style="font-size: 15px;">Up</a>
+Al ejecutar el proyecto podemos ver los cambios en tiempo real.
+
+# Scaffolding en Angular <a href="#índice" style="font-size: 15px;">Up</a>
+
+El scaffolding en Angular genera automáticamente la estructura básica de un proyecto al usar ng new
+
+## Raiz de un Proyecto <a href="#índice" style="font-size: 15px;">Up</a>
+
+- `angular.json`: Configuración del proyecto.
+
+- `package.json`: Dependencias utlizadas.
+
+- `pakage-lock.json`: Dependencias instaladas.
+
+- `README.md`: Documentación del proyecto.
+
+- `server.ts`: Renderizado del lado del servidor (SSR). Aparece si se habilita la opción de SSR.
+
+- `tsconfig.json`: Configuración de TypeScript.
+
+- `tsconfig.app.json`: Configuración de TypeScript para la aplicación.
+
+- `tsconfig.spec.json`: Configuración de TypeScript para las pruebas.
+
+## Carpetas .angular <a href="#índice" style="font-size: 15px;">Up</a>
+
+- `my-app`: Contiene el fichero tsbuildinfo, generado por el compilador TypeScript durante la compilación incremental. 
+
+- `vite`: una herramienta de construcción frontend conocida por su rápido desarrollo.
+
+## Carpetas .vscode <a href="#índice" style="font-size: 15px;">Up</a>
+
+Contiene la configuración de Visual Studio Code .
+
+## Carpetas node_modules <a href="#índice" style="font-size: 15px;">Up</a>
+
+Contiene la dependencias node que utiliza el proyecto.
+
+## Carpetas src <a href="#índice" style="font-size: 15px;">Up</a>
+
+Es donde se encuentra la mayor parte del código fuente de la aplicación.
+
+- `fav.ico`: Icono de la aplicación.
+
+- `index.html`: Página principal de la aplicación.
+
+- `main.server.ts`: Fichero ts para SSR.
+
+- `main.ts`: Fichero ts principal de la aplicación.
+
+- `style.css`: Hoja de estilos global.
+
+### Carpeta app <a href="#índice" style="font-size: 15px;">Up</a>
+
+Es donde se define la estructura, la lógica y el comportamiento de la aplicación. Y donde se trabaja el dessarrollo de la aplicación, inicialmente contiene un componente llamado app.component.ts. 
+
+*Archivos componentes:*
+
+- `.css`: Estilos del componente.
+
+- `.html`: Plantilla del componente.
+
+- `.ts`: Lógica del componente.
+
+- `.spec.ts`: Pruebas del componente.
+
+**Tambien contiene:**
+
+- `app.config.server.ts`: Usado para SSR.
+
+- `app.config.ts`: Usado para el BootStraping.
+
+- `app.routes.ts`: Para enrutado de los componentes.
+
+Tambien crea cada elemento de Angular como Componentes, Directivas, Servicios, Pipes, etc.
+
+### Carpeta assets <a href="#índice" style="font-size: 15px;">Up</a>
+
+En esta carpeta se almacenan los recursos estáticos de la aplicación que no se puede procesar por Angular durante la compilación, como imágenes, fuentes, etc.
+
+# Modo producción <a href="#índice" style="font-size: 15px;">Up</a>
+
+Angular nos deja trabajar en modo de dessarrollo cuando estamos construyendo la aplicación, pero cuando la aplicación está lista para producción, debemos compilar los datos justos para la ejecución del proyecto/aplicacion en un Servidor Web.
+
+***Para compilar en modo producción:***
+
+```bash
+ng build
+```
