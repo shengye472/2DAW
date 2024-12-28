@@ -46,12 +46,16 @@ public class BookDaoJpaImpl implements BookDao {
 
     @Override
     public Optional<Book> findByIsbn(String isbn) {
-        return Optional.empty();
+        return Optional.ofNullable(bookJpaRepository
+                .findByIsbn(isbn))
+                .map(BookJpaMapper.INSTANCE::toBookDetail);
     }
 
     @Override
     public Optional<Book> findById(int id) {
-        return Optional.empty();
+        return bookJpaRepository
+                .findById(id)
+                .map(BookJpaMapper.INSTANCE::toBookDetail);
     }
 
     @Override
