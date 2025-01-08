@@ -52,7 +52,7 @@ public class BookDaoJpaImpl implements BookDao {
     }
 
     @Override
-    public Optional<Book> findById(int id) {
+    public Optional<Book> findById(long id) {
         return bookJpaRepository
                 .findById(id)
                 .map(BookJpaMapper.INSTANCE::toBookDetail);
@@ -60,6 +60,11 @@ public class BookDaoJpaImpl implements BookDao {
 
     @Override
     public void save(Book book) {
+        bookJpaRepository.save(BookJpaMapper.INSTANCE.toBookEntity(book));
+    }
 
+    @Override
+    public void deleteById(Long id) {
+        bookJpaRepository.deleteById(id);
     }
 }

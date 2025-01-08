@@ -14,7 +14,9 @@ public interface BookRepository {
 
     Optional<Book> findByIsbn(String isbn);
 
-    Optional<Book> findById(int id);
+    Optional<Book> findById(long id);
 
     void save(Book book);
+
+    void deleteById(Long id);
 }

@@ -40,7 +40,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Optional<Book> findById(int id) {
+    public Optional<Book> findById(long id) {
         return bookRepository.findById(id);
     }
 
@@ -67,5 +67,10 @@ public class BookServiceImpl implements BookService {
     @Override
     public void save(Book book) {
         bookRepository.save(book);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        bookRepository.deleteById(id);
     }
 }

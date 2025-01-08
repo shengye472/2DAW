@@ -18,4 +18,6 @@ public interface BookJpaMapper {
     Book toBook(BookEntity bookEntity);
 
     Book toBookDetail(BookEntity bookEntity);
+
+    BookEntity toBookEntity(Book book);
 }

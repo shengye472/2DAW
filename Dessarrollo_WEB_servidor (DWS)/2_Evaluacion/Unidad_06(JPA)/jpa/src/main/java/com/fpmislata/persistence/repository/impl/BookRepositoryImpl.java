@@ -36,12 +36,17 @@ public class BookRepositoryImpl implements BookRepository {
     }
 
     @Override
-    public Optional<Book> findById(int id) {
+    public Optional<Book> findById(long id) {
         return bookDao.findById(id);
     }
 
     @Override
     public void save(Book book) {
         bookDao.save(book);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        bookDao.deleteById(id);
     }
 }

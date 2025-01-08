@@ -35,6 +35,7 @@ public class BookAdminController {
     private final BookInsertAuthorUseCase bookInsertAuthorUseCase;
     private final BookInsertGenreUseCase bookInsertGenreUseCase;
     private final BookInsertUseCase bookInsertUseCase;
+    private final BookDeleteByIdUseCase bookDeleteByIdUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
@@ -74,5 +75,11 @@ public class BookAdminController {
     public ResponseEntity<Void> insertBook(@RequestBody Book book){
         bookInsertUseCase.insertBook(book);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBook(@PathVariable Long id){
+        bookDeleteByIdUseCase.deleteBook(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

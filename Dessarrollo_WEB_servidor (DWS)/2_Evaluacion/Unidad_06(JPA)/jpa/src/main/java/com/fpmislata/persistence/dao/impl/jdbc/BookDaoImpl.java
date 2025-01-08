@@ -11,7 +11,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.util.List;
@@ -71,7 +70,7 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public Optional<Book> findById(int id) {
+    public Optional<Book> findById(long id) {
         String sql = """
                 SELECT * FROM books
                 LEFT JOIN categories ON books.category_id = categories.id
@@ -198,5 +197,14 @@ public class BookDaoImpl implements BookDao {
                 VALUES(?, ?)
             """;
         genres.stream().forEach(g -> jdbcTemplate.update(sql, id, g.getId()));
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        String sql = """
+                DELETE FROM books
+                WHERE id = ?
+            """;
+        jdbcTemplate.update(sql, id);
     }
 }

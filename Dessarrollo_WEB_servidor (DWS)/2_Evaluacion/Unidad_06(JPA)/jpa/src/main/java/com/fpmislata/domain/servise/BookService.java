@@ -16,13 +16,15 @@ public interface BookService {
 
     Optional<Book> findByIsbn(String isbn);
 
-    Optional<Book> findById(int id);
+    Optional<Book> findById(long id);
 
     void addAuthor (Book book, Author author);
 
     void addGenre(Book book, Genre genre);
 
     void save(Book book);
+
+    void deleteById(Long id);
 
 //    void insertAuthors(Integer id, List<AuthorUser> authors);
 

@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.fpmislata</groupId>
 	<artifactId>jpa</artifactId>
-	<version>v2</version>
+	<version>v3</version>
 	<name>jpa</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
