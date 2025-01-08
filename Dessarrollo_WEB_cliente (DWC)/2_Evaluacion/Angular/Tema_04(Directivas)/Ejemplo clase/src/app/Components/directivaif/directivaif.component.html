@@ -1,0 +1,65 @@
+<!-- <div class="alert alert-danger" role="alert" *ngIf="isLogged">
+    A simple primary alert—check it out!
+</div> -->
+
+<button class="btn btn-primary" (click)="verDiv()">Ver div</button>
+<button class="btn btn-success" (click)="ocultarDiv()">Ocultar div</button>
+
+
+@if (isLogged) {
+<div class="alert alert-success" role="alert">
+    El usuario esta logueado
+</div>
+}@else {
+<div class="alert alert-danger" role="alert">
+    El usuario no esta logueado
+</div>
+}
+
+<ul>
+    <li *ngFor="let articulo of articulos">
+        {{ articulo.nombre }}
+    </li>
+</ul>
+<div class="row row-cols-1 row-cols-md-6 g-4">
+
+    <div class="card" style="width: 18rem;" *ngFor="let articulo of articulos">
+        <img src="{{articulo.id}}.jpg" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{articulo.nombre}} ({{articulo.unidades}})</h5>
+            <p class="card-text">{{articulo.descripcion}}</p>
+            <b>
+                <p class="card-text text-center">{{articulo.precio}}</p>
+            </b>
+        </div>
+    </div>
+
+</div>
+
+
+<ul>
+    @for(articulo of articulos; track articulo.id){
+    <li> {{articulo.nombre}}</li>
+    }
+    @empty {
+    <div class="alert alert-danger">No hay articulos</div>
+    }
+</ul>
+
+<div class="row row-cols-1 row-cols-md-6 g-4">
+    @for(articulo of articulos ; track articulo.id){
+    <div class="card" style="width: 18rem;">
+        <img src="{{articulo.id}}.jpg" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{articulo.nombre}} ({{articulo.unidades}})</h5>
+            <p class="card-text">{{articulo.descripcion}}</p>
+            <b>
+                <p class="card-text text-center">{{articulo.precio}}</p>
+            </b>
+        </div>
+    </div>
+    }@empty {
+    <div class="alert alert-danger">No hay articulos desde arroba for</div>
+    }
+
+</div>

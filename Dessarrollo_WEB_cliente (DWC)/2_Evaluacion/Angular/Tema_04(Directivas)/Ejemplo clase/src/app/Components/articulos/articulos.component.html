@@ -1,0 +1,88 @@
+@if (articulos.length == 0) {
+<div class="alert alert-danger">
+    <h1>No hay articulos</h1>
+</div>
+} @else {
+<div>
+    Categorias:
+    <select [(ngModel)]="filtro" (change)="filtrar(filtro)">
+        @for (categori of categorias; track categori) {
+        <option [value]="categori">{{categori}}</option>
+        }
+    </select>
+</div>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Unidades</th>
+                <th>Precio</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+
+                @for (articulo of articulos; track articulo.id) {
+                <tr>
+                    <td><b>{{articulo.id}}</b></td>
+                    <td>{{articulo.nombre}}</td>
+                    <td>{{articulo.descripcion}}</td>
+                    <td>{{articulo.unidades}}</td>
+                    <td>{{articulo.precio}}</td>
+                    <td>
+                        @if (articulo.unidades == 0) {
+                        <button class="btn btn-danger" (click)="mostrar(articulo)">Ver detalle</button>
+                        } @else {
+                        <button class="btn btn-primary" (click)="mostrar(articulo)">Ver detalle</button>
+                        }
+                    </td>
+                </tr>
+                }
+        </tbody>
+    </table>
+</div>
+}
+
+@if (visible) {    
+    <div class="card" style="width: 18rem;">
+        <img src="{{articulo.id}}.jpg" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{articulo.nombre}} ({{articulo.unidades}})</h5>
+            <p class="card-text">{{articulo.descripcion}}</p>
+            <b>
+                <p class="card-text text-center">{{articulo.precio}}</p>
+            </b>
+        </div>
+        <button class="btn btn-primary" (click)="comprar(articulo)"
+        [disabled]=" articulo.unidades==0">Comprar</button>
+        <button class="btn btn-dark" (click)="suma()">Añadir</button>
+        <button class="btn btn-danger" (click)="resta()">Quitar</button>
+    </div>
+}
+
+<!-- <div class="container-fluid">
+    <div class="row ">
+        @for(articulo of articulos; track articulo.id){
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{articulo.id}}.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{articulo.nombre}} ({{articulo.unidades}})</h5>
+                        <p class="card-text">{{articulo.descripcion}}</p>
+                        <b>
+                            <p class="card-text text-center">{{articulo.precio}}</p>
+                        </b>
+                    </div>
+                    <button class="btn btn-primary" (click)="comprar(articulo)"
+                    [disabled]=" articulo.unidades==0">Comprar</button>
+                    <button class="btn btn-dark" (click)="suma()">Añadir</button>
+                    <button class="btn btn-danger" (click)="resta()">Quitar</button>
+                </div>
+            </div>
+        }
+    </div>
+</div> -->
