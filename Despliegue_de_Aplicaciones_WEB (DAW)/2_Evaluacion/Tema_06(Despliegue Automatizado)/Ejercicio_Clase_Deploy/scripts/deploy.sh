@@ -14,6 +14,6 @@ git switch developWin
 
 mvn clean install
 
-scp ./target/*.jar ${USER_NAME_DEPLOY_SERVER}@${IP_DEPLOY_SERVER}:/home/${USER_NAME_DEPLOY_SERVER}/Sheng
+scp ./target/*.jar ${USER_NAME_DEPLOY_SERVER}@${IP_DEPLOY_SERVER}:/home/${USER_NAME_DEPLOY_SERVER}/sheng
 
-ssh ${USER_NAME_DEPLOY_SERVER}@${IP_DEPLOY_SERVER} Sheng/jdk-21.0.5+11/bin/java -jar Sheng/*.jar
+ssh ${USER_NAME_DEPLOY_SERVER}@${IP_DEPLOY_SERVER} sheng/jdk-21.0.5+11/bin/java -jar sheng/*.jar --server.port=${APP_PORT}
