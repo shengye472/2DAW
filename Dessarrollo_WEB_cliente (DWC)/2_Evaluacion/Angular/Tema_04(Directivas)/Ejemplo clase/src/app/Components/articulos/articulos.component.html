@@ -1,4 +1,4 @@
-@if (articulos.length == 0) {
+@if(articulos.length == 0) {
 <div class="alert alert-danger">
     <h1>No hay articulos</h1>
 </div>
@@ -32,7 +32,7 @@
                     <td>{{articulo.nombre}}</td>
                     <td>{{articulo.descripcion}}</td>
                     <td>{{articulo.unidades}}</td>
-                    <td>{{articulo.precio}}</td>
+                    <td>{{articulo.precio}}€</td>
                     <td>
                         @if (articulo.unidades == 0) {
                         <button class="btn btn-danger" (click)="mostrar(articulo)">Ver detalle</button>
@@ -54,7 +54,7 @@
             <h5 class="card-title">{{articulo.nombre}} ({{articulo.unidades}})</h5>
             <p class="card-text">{{articulo.descripcion}}</p>
             <b>
-                <p class="card-text text-center">{{articulo.precio}}</p>
+                <p class="card-text text-center">{{articulo.precio}}€</p>
             </b>
         </div>
         <button class="btn btn-primary" (click)="comprar(articulo)"
