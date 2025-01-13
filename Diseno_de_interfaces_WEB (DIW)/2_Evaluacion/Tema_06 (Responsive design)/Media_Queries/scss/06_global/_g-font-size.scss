@@ -1,0 +1,13 @@
+@each $key, $value in $font-size {
+  @if $key =="" {
+    .g--font-size {
+      font-size: #{$value};
+    }
+  } @else {
+    .g--font-size-#{$key} {
+      font-size: #{$value};
+    }
+  }
+}
+
+@include responsive("font-size",true,$font-size);

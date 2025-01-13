@@ -1,0 +1,5 @@
+@each $name, $size in $width {
+    .g--width-#{$name} {
+      width: var(--width-#{$name});
+    }
+} 
