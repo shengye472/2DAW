@@ -1,0 +1,11 @@
+<h1 class="text-center">Listado de Trabajadores</h1>
+<div class="row row-cols-1 row-cols-md-6">
+    @for (empleado of trabajadores; track empleado.id){
+        <app-trabajador 
+        [trabajador]="empleado"
+        (plus)="plus($event)"
+        (minus)="minus($event)"
+        (delete)="delete($event)"
+        ></app-trabajador>
+    }
+</div>
