@@ -1,0 +1,70 @@
+<h1>Listado de articulos (Practica)</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Unidades</th>
+            <th>
+                <button class="btn btn-primary" (click)="newItem()">Nuevo Articulo</button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (articulo of articulos; track articulo.id) {
+        <tr>
+            <td>{{ articulo.id }}</td>
+            <td>{{ articulo.nombre }}</td>
+            <td>{{ articulo.descripcion }}</td>
+            <td>{{ articulo.precio }}€</td>
+            <td>{{ articulo.unidades }}</td>
+            <td>
+                <button class="btn btn-success" (click)="ver(articulo.id)">Ver</button>
+                <button class="btn btn-danger" (click)="remove(articulo.id)">Borrar</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@if (seeNew) {
+<div class="alert alert-success">
+    <h1>Nuevo articulo</h1>
+    <div>Id</div>
+    <input [(ngModel)]="new.id">
+    <div>Nombre</div>
+    <input [(ngModel)]="new.nombre">
+    <div>Descripcion</div>
+    <input [(ngModel)]="new.descripcion">
+    <div>Unidades</div>
+    <input [(ngModel)]="new.unidades">
+    <div>Precio</div>
+    <input [(ngModel)]="new.precio">
+    <div>
+        <button class="btn btn-primary" (click)="save()">Guardar</button>
+        <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+    </div>
+</div>
+}
+@if (seeItem) {
+<div class="alert alert-primary">
+    <h1>Nuevo articulo</h1>
+    <div>Id</div>
+    <input [(ngModel)]="articulo.id" disabled>
+    <div>Nombre</div>
+    <input [(ngModel)]="articulo.nombre">
+    <div>Descripcion</div>
+    <input [(ngModel)]="articulo.descripcion">
+    <div>Unidades</div>
+    <input [(ngModel)]="articulo.unidades">
+    <div>Precio</div>
+    <input [(ngModel)]="articulo.precio">
+    <div>
+        <button class="btn btn-primary" (click)="update()">Guardar</button>
+        <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+    </div>
+</div>
+}
