@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Cabecera</div>
+
+        <div class="left_sidebar"> Menu Izquierdo</div>
+
+        <div class="body"> Contenido Principal</div>
+
+        <div class="right_sidebar"> Menu Derecho</div>
+
+        <div class="footer"> Pie de Pagina</div>
+    </div>
+</body>
+
+<style>
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 200px auto 200px;
+        grid-template-rows: 100px auto 100px;
+    }
+
+    .header {
+        background-color: lightpink;
+        grid-column: 1 / 4;
+    }
+
+    .left_sidebar {
+        background-color: lightblue;
+        display: none;
+    }
+
+    .body {
+        background-color: lightsalmon;
+        grid-column: 1 / 4;
+    }
+
+    .right_sidebar {
+        background-color: yellow;
+        display: none;
+    }
+
+    .footer {
+        background-color: lightgreen;
+        grid-column: 1 / 4;
+    }
+
+    @media (min-width: 768px) {
+        .left_sidebar {
+            display: block;
+            grid-column: 1/2;
+        }
+
+        .body {
+            grid-column: 2/4;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .body {
+            grid-column: 2/3;
+        }
+        .right_sidebar {
+            display: block;
+            grid-column: 3/4;
+        }
+    }
+</style>
+
+</html>
