@@ -1,0 +1,7 @@
+@each $name, $size in $height {
+    .g--height-#{$name} {
+      height: var(--height-#{$name});   
+    }
+}
+
+@include responsive("height", true, $height);

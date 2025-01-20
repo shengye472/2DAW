@@ -1,0 +1,21 @@
+
+
+$size-window: map-get($options, "size-window");
+$type: map-get(map-get($options, "type"), "a");
+
+@for $i from 1 through length($size-window) {
+    @media (min-width: nth($size-window, $i)) {
+        @each $value in $display {
+            .g--display--min-#{$value}\@#{nth($type, $i)} {
+                display: #{$value};
+            }
+        }
+    }
+    @media (max-width: nth($size-window, $i)) {
+        @each $value in $display {
+            .g--display--max-#{$value}\@#{nth($type, $i)} {
+                display: #{$value};
+            }
+        }
+    }
+}

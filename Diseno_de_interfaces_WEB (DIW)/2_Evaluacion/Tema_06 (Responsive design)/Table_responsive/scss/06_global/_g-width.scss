@@ -1,0 +1,7 @@
+@each $name, $size in $width {
+    .g--width-#{$name} {
+      width: var(--width-#{$name});
+    }
+} 
+
+@include responsive("width", true, $width);

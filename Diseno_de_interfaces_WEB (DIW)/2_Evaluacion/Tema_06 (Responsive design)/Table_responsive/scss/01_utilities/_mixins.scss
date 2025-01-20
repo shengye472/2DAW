@@ -1,0 +1,74 @@
+@mixin box-shadow($name) {
+    -webkit-box-shadow: 2px 10px 24px $name;
+    -moz-box-shadow: 2px 10px 24px $name;
+    box-shadow: 2px 10px 24px $name;
+}
+
+@mixin padding($name) {
+    padding-top: $name;
+    padding-bottom: $name;
+    padding-left: $name;
+    padding-right: $name;
+}
+
+/*border tamaño, style, color */
+/*
+@mixin border($size,$border-style,$colors){
+    border-style: $border-style;
+    border-width:$size;
+    border-color: $colors;
+}
+@mixin font($colors,$font-size,$fonts,$text-aling,$text-decoration){
+    color:$color;
+    font-size: $font-size;
+    font-family: $fonts;
+    text-align: $text-aling;
+    text-decoration: $text-decoration;
+}*/
+
+@mixin responsive($name, $option-type,$variable) {
+    $size-window: map-get($options, "size-window");
+
+    @if $option-type {
+        $type: map-get(map-get($options, "type"), "a");
+
+        @for $i from 1 through length($size-window) {
+            @media (min-width: nth($size-window, $i)) {
+                @each $key, $value in $variable {
+                    @if $key =="" {
+                        .g--#{$name}\@#{nth($type, $i)} {
+                            #{$name}: #{$value};
+                        }
+                    }
+
+                    @else {
+                        .g--#{$name}-#{$key}\@#{nth($type, $i)} {
+                            #{$name}: #{$value};
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @else {
+        $type: map-get(map-get($options, "type"), "b");
+
+        @for $i from 1 through length($size-window) {
+            @media (min-width: nth($size-window, $i)) {
+                @each $key, $value in $variable {
+                    @if $key =="" {
+                        .#{nth($type, $i)}:g--#{$name} {
+                            #{$name}: #{$value};
+                        }
+                    }
+
+                    @else {
+                        .#{nth($type, $i)}:g--#{$name}-#{$key} {
+                            #{$name}: #{$value};
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
