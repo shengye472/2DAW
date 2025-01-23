@@ -14,6 +14,7 @@ export class ArticulosComponent {
 
   articulos!: Articulo[];
   articulo!: Articulo;
+  tempArticulo!: Articulo;
   seeItem!: boolean;
   seeNew!: boolean;
   new!: Articulo;
@@ -26,6 +27,7 @@ export class ArticulosComponent {
   ver(id: string) {
     this.seeItem = true;
     this.articulo = this.service.getArticulo(id);
+    this.tempArticulo = { ...this.articulo }; 
   }
 
   cancel() {
@@ -55,7 +57,7 @@ export class ArticulosComponent {
   }
 
   update() {
-    this.service.putArticulo(this.articulo);
+    this.service.putArticulo(this.tempArticulo);
   }
 
   remove(id: string) {

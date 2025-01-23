@@ -53,15 +53,15 @@
 <div class="alert alert-primary">
     <h1>Nuevo articulo</h1>
     <div>Id</div>
-    <input [(ngModel)]="articulo.id" disabled>
+    <input [(ngModel)]="tempArticulo.id" disabled>
     <div>Nombre</div>
-    <input [(ngModel)]="articulo.nombre">
+    <input [(ngModel)]="tempArticulo.nombre">
     <div>Descripcion</div>
-    <input [(ngModel)]="articulo.descripcion">
+    <input [(ngModel)]="tempArticulo.descripcion">
     <div>Unidades</div>
-    <input [(ngModel)]="articulo.unidades">
+    <input [(ngModel)]="tempArticulo.unidades">
     <div>Precio</div>
-    <input [(ngModel)]="articulo.precio">
+    <input [(ngModel)]="tempArticulo.precio">
     <div>
         <button class="btn btn-primary" (click)="update()">Guardar</button>
         <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
