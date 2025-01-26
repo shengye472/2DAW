@@ -1,0 +1,14 @@
+<div class="text-center">
+    <h4>¿Estás seguro de que quieres borrar el artículo?</h4>
+        <div>
+            <p>ID: {{articulo.id}}</p>
+            <p>Nombre: {{articulo.nombre}}</p>
+            <p>Descripción: {{articulo.descripcion}}</p>
+            <p>Precio: {{articulo.precio}}€</p>
+            <p>Unidades: {{articulo.unidades}}</p>
+        </div>
+
+    <button class="btn btn-danger me-1" (click)="delete()" routerLink="/articulos">Sí</button>
+
+    <button class="btn btn-primary ms-1" routerLink="/articulos">No</button>
+</div>

@@ -1,0 +1,37 @@
+<h3 class="text-center">
+    Listado de Articulos 
+    <button class="btn btn-primary" routerLink="new">Nuevo Articulo</button>
+</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Unidades</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @for (articulo of articulos; track articulo.id){
+        <tr>
+            <td>{{articulo.id}}</td>
+            <td>{{articulo.nombre}}</td>
+            <td>{{articulo.descripcion}}</td>
+            <td>{{articulo.precio}}€</td>
+            <td>{{articulo.unidades}}</td>
+            <td>
+                <button class="btn btn-success" routerLink="{{articulo.id}}">Ver</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" routerLink="delete/{{articulo.id}}">Eliminar</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<div class="text-center">
+    <button class="btn btn-primary text-center" routerLink="/">Volver</button>
+</div>

@@ -1,0 +1,27 @@
+<div class="text-center">
+    <h2>Nuevo Articulo</h2>
+    <div class="text-start mb-4">
+        <div>
+            <label class="mx-1">ID:</label>
+            <input type="text" class="form-control mx-1" [(ngModel)]="articulo.id" maxlength="3">
+        </div>
+        <div>
+            <label class="mx-1">Nombre:</label>
+            <input type="text" class="form-control mx-1" [(ngModel)]="articulo.nombre">
+        </div>
+        <div>
+            <label class="mx-1">Descripción:</label>
+            <input type="text" class="form-control mx-1" [(ngModel)]="articulo.descripcion">
+        </div>
+        <div>
+            <label class="mx-1">Precio:</label>
+            <input type="text" class="form-control mx-1" [(ngModel)]="articulo.precio">
+        </div>
+        <div>
+            <label class="mx-1">Unidades:</label>
+            <input type="text" class="form-control mx-1" [(ngModel)]="articulo.unidades">
+        </div>
+    </div>
+    <button class="btn btn-success me-1" routerLink="/articulos" (click)="save()">Guardar</button>
+    <button class="btn btn-danger ms-1" routerLink="/articulos">Cancelar</button>
+</div>
