@@ -1,6 +1,7 @@
 package com.fpmislata.domain.entity;
 
 import com.fpmislata.common.locale.LanguageUtils;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,11 +10,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Author {
+    @NotNull
     private long id;
+    @NotNull
     private String name;
     private String nationality;
     private String biographyEs;
     private String biographyEn;
+
     private int birthYear;
     private int deathYear;
 
