@@ -2,6 +2,7 @@ package com.fpmislata.common.error;
 
 import com.fpmislata.common.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,6 +17,16 @@ public class ApiExceptionHandler {
     })
     @ResponseBody
     public ErrorMessage notFoundRequest(ResourceNotFoundException e) {
+        e.printStackTrace();
+        return new ErrorMessage(e);
+    }
+
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @ExceptionHandler({
+            MethodArgumentNotValidException.class
+    })
+    @ResponseBody
+    public ErrorMessage handleValidationException(MethodArgumentNotValidException e) {
         e.printStackTrace();
         return new ErrorMessage(e);
     }
