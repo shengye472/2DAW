@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="cuadrado ">
+        <h3>CUADRO MEDICO ADESLAS</h3>
+        <p>Más de 51.000 profesionales, más de 200 hospitales privados y más de 1.400 centros médicos para ofrecerte la mejor atención.</p>
+        <div class="text-center">
+            <button class="btn" onclick="hola()">Buscar Ahora</button>
+        </div>
+    </div>
+
+    <div class="hola" id="hola">
+
+    </div>
+    
+</body>
+<script>
+    function hola(){
+        var hola = document.getElementById("hola");
+        hola.classList.remove("hola");
+        hola.classList.add("hola2");
+    }
+</script>
+<style>
+    .hola{
+        
+        display: none;
+    }
+
+    .hola2{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        display: block;
+    }
+
+    .cuadrado{
+        margin-top: 50px;
+        margin-left: 200px;
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.5s ease 1s, background-color 0.5s ease 1s;
+    }
+
+    .cuadrado:hover{
+        transform: scale(1.05, 1.05);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .text-center{
+        text-align: center;
+    }
+
+    .btn{
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+    }
+</style>
+</html>
