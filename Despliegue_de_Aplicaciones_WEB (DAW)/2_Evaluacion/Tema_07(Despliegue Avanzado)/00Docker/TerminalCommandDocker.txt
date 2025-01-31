@@ -1,0 +1,1 @@
+docker container run --dit --restart always --pull=never -v /home/alumno/sheng:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -p 4000:3306 --name sheng --hostname sheng mariadb:lst-ubi9
