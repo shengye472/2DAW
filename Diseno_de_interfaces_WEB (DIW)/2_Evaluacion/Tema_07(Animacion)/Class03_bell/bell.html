@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<tyle lang="en">
+<head>
+    <meta charset="UTF-7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bell</title>
+</head>
+<body>
+    <div class="bell bell-active">
+        <img src="bell.png">
+    </div>
+</body>
+<style>
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    .bell{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .bell-active{
+        /* animation: bell-active 1.5s ease-in-out infinite; */
+        animation: bell-active 1s cubic-bezier(.78,.01,.23,1) infinite;
+        animation-direction: alternate;
+        transform-origin: 50% 0%;
+
+    }
+    @keyframes bell-active{
+        0%{
+            transform: rotate(70deg);
+        }
+        100%{
+            transform: rotate(-70deg);
+        }
+    }
+
+</style>
+</html>
