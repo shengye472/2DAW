@@ -20,6 +20,8 @@ export class VerComponent {
       let temp = this.SERVICE.getArticulo(params['id']);
       this.articulo = {...temp};
     });
+    // let temp = this.URLDATA.snapshot.params['id'];
+    // let temp2 = this.URLDATA.snapshot.paramMap.get('id');
   }
 
 }
