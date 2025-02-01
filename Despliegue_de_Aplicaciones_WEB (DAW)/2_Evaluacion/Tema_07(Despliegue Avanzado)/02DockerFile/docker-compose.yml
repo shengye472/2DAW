@@ -1,0 +1,28 @@
+services:
+  mariadbSheng:
+    image: mariadb:lts-ubi9
+    restart: always
+    hostname: mariadbSheng
+    volumes:
+      - ./app:/var/lib/mysql
+    ports:
+      - "4000:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
+    stdin_open: true
+    pull_policy: never
+
+  appSheng:
+    image: mi_sheng_app:1.0
+    restart: always
+    hostname: appSheng
+    volumes:
+      - ./app:/opt/sheng/app
+    ports:
+      - "4001:8080"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
+    stdin_open: true
+    pull_policy: never

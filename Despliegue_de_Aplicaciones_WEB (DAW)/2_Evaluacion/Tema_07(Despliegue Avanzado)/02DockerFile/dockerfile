@@ -1,0 +1,13 @@
+FROM eclipse-temurin:21.0.6_7-jdk-jammy
+
+RUN mkdir -p /opt/sheng/app
+
+COPY ./*.jar /opt/sheng/app
+
+EXPOSE 808
+
+WORKDIR /opt/sheng/app
+
+ENV ENTORNO=produccion
+
+CMD ["java", "-jar", "*.jar"]
