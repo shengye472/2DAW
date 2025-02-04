@@ -1,6 +1,6 @@
 package com.fpmislata.exam.common.validation;
 
-import com.fpmislata.common.validation.annotation.ValidYear;
+import com.fpmislata.exam.common.validation.annotation.ValidYear;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
