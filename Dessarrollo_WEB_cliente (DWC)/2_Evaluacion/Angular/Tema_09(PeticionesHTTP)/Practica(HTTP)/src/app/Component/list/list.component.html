@@ -1,0 +1,35 @@
+<div>
+    <h3 class="text-center">Articulos
+    <button class="btn btn-primary ms-3" (click)="new()">Nuevo Articulo</button>
+    </h3> 
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th class="text-end">Precio</th>
+                <th class="text-center">Unidades</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (articulo of ARTICULOS; track articulo.id) {
+                <tr>
+                    <td>{{articulo.id}}</td>
+                    <td>{{articulo.nombre}}</td>
+                    <td>{{articulo.descripcion}}</td>
+                    <td class="text-end">{{articulo.precio}}€</td>
+                    <td class="text-center">{{articulo.unidades}}</td>
+                    <td>
+                        <button class="mx-1 btn btn-primary" (click)="edit(articulo.id)">Editar</button>
+                        <button class="mx-1 btn btn-danger" (click)="delete(articulo.id)">Borrar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <button class="btn btn-primary text-center" (click)="volver()">Volver</button>
+    </div>
+</div>

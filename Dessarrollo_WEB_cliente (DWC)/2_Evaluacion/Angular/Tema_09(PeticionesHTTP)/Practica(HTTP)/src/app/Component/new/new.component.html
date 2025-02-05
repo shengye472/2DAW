@@ -1,0 +1,26 @@
+<h3 class="text-center">Nuevo Articulo</h3>
+    <div class="mx-4">
+        <label>Id:</label>
+        <input type="text" class="form-control" [(ngModel)]="articulo.id">
+    </div>
+    <div class="mx-4">
+        <label>Nombre:</label>
+        <input type="text" class="form-control" [(ngModel)]="articulo.nombre">
+    </div>
+    <div class="mx-4">
+        <label>Descripción:</label>
+        <input type="text" class="form-control" [(ngModel)]="articulo.descripcion">
+    </div>
+    <div class="mx-4">
+        <label>Precio:</label>
+        <input type="text" class="form-control" [(ngModel)]="articulo.precio">
+    </div>
+    <div class="mx-4">
+        <label>Unidades:</label>
+        <input type="text" class="form-control" [(ngModel)]="articulo.unidades">
+    </div>
+    <div class="text-center mt-3">
+        <button class="btn btn-primary text-center mx-2" (click)="save()">Guardar</button>
+        <button class="btn btn-danger text-center mx-2" (click)="cancel()">Cancelar</button>
+
+    </div>
