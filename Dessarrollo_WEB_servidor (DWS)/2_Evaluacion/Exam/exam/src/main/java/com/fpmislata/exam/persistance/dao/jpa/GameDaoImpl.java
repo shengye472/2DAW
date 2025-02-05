@@ -27,8 +27,9 @@ public class GameDaoImpl implements GameDao {
 
     @Override
     public Optional<Game> findByCode(String GameCode) {
-        return Optional.ofNullable(gameJPARepository
-                .findByGameCode(GameCode))
+        Optional<Game> game = Optional.ofNullable(gameJPARepository
+                        .findByGameCode(GameCode))
                 .map(GameJPAMapper.INSTANCE::toGameDetail);
+        return game;
     }
 }

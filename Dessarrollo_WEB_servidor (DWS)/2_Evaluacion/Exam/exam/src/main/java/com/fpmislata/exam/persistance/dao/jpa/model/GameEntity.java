@@ -28,5 +28,5 @@ public class GameEntity {
             name = "games_characters",
             joinColumns = @JoinColumn(name = "game_id"),
             inverseJoinColumns = @JoinColumn(name = "character_id"))
-    private List<CharacterGameEntity> charactersGame;
+    private List<CharacterGameEntity> characterGames;
 }

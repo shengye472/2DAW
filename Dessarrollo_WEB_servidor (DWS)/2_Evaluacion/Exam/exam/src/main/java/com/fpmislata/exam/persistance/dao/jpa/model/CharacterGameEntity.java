@@ -14,5 +14,5 @@ public class CharacterGameEntity {
     private Integer id;
     private String name;
     private String role;
-    private String biography;
+    private String description;
 }
