@@ -1,0 +1,6 @@
+/*Global Duration*/
+@each $name in $time{
+    .g-duration-#{$name}{
+        transition-duration: var(--time-#{$name});
+    }
+}

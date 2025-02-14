@@ -1,0 +1,6 @@
+/*Globals Colors*/
+@each $name, $values in $colors{
+    .g-color-#{$name}{
+        color: var(--color-#{$name});
+    }
+}

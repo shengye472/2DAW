@@ -1,0 +1,34 @@
+.container {
+    width: 300px;
+    margin-top: 250px;
+    display: flex;
+}
+.size {
+    width: min(100px);
+    height: min(100px);
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.c1, .c3 {
+    transition: transform 3s;
+}
+
+@media (min-width: 500px) {
+    .c1, .c3 {
+        transform: translate(0, -50px);
+        transition: transform 3s;
+    }
+}
+@media (min-width: 800px) {
+    .c1, .c3 {
+        transform: translate(0, -100px);
+        transition: transform 3s;
+    }
+}

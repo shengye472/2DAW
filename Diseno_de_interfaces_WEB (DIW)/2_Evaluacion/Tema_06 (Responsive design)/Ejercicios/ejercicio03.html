@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 03</title>
+    <link rel="icon" href="assets/codigo.png" type="image/png">
+</head>
+<body>
+    <div class="rojo"></div>
+    <div class="verde"></div>
+    <div class="azul"></div>
+    <div class="pink"></div>
+    <div class="yellow"></div>
+</body>
+<style>
+    .rojo{
+        background-color: red;
+        width: max(100px, 10vw);
+        height: max(100px, 10vw);
+    }
+    .verde{
+        background-color: green;
+        width: min(800px, 10vw);
+        height: min(800px, 10vw);
+    }
+    .azul{
+        background-color: blue;
+        width: clamp(100px, 10vw, 800px);
+        height: clamp(100px, 10vw, 800px);
+    }
+    .pink{
+        background-color: pink;
+        width: calc(50vw + 20px);
+        height: calc(50vw + 20px);
+    }
+    .yellow{
+        background-color: yellow;
+        width: clamp(100px, calc(50vw + 20px), 600px);
+        height: clamp(100px, calc(50vw + 20px), 600px);
+    }
+</style>
+</html>

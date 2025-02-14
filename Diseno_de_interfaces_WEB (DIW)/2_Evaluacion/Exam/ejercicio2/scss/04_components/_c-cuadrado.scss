@@ -1,0 +1,65 @@
+.c-cuadrado {
+    --c-cuadrado-size-width: var(--width-100);
+    --c-cuadrado-size-width-pc: var(--width-100pc);
+    --c-cuadrado-size-height: var(--height-100);
+
+    --c-cuadrado-color: var(--color-azul);
+
+    --c-cuadrado-margin: var(--margin-15);
+
+    --c-cuadrado-duration-5: var(--time-5);
+    --c-cuadrado-duration-3: var(--time-3);
+
+    --c-cuadrado-timing-ease-in-out: var(--timing-ease-in-out);
+
+    $size-window: map-get($options, "size-window");
+    $type: map-get(map-get($options, "type"), "a");
+
+    width: var(--c-cuadrado-size-width-pc);
+    
+    &-body {
+        margin: var(--c-cuadrado-margin);
+        width: var(--c-cuadrado-size-width);
+        height: var(--c-cuadrado-size-height);
+        background-color: var(--c-cuadrado-color);
+    }
+
+    &-animacion {
+        &-moverse {
+            animation-name: mover;
+        }
+
+        &-girar {
+            animation-name: girar;
+        }
+
+        &-duration {
+            &-5 {
+                animation-duration: var(--c-cuadrado-duration-5);
+            }
+
+            &-3 {
+                animation-duration: var(--c-cuadrado-duration-3);
+            }
+
+            @for $o from 1 through length($size-window) {
+                @media (min-width: nth($size-window, $o)) {
+                    @for $i from 1 through length($time) {
+                        $value: nth($list: $time, $n:$i);
+                        &-#{$value}\@#{nth($type, $o)} {
+                            animation-duration: #{$value}s;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-timing {
+            animation-timing-function: ease-in-out;
+        }
+
+
+    }
+
+
+}

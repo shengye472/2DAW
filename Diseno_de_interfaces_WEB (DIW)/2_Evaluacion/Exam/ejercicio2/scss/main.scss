@@ -1,0 +1,18 @@
+/*01 Utilities*/
+@import
+    "./01_utilities/animacion.scss",
+    "./01_utilities/variables_sass.scss",
+    "./01_utilities/variables_CSS.scss";
+
+
+/*04 Components*/
+@import
+    "./04_components/c-cuadrado.scss";
+
+/*06 Global*/
+@import 
+    "./06_global/g-width.scss",
+    "./06_global/g-height.scss",
+    "./06_global/g-timing.scss",
+    "./06_global/g-duration.scss",
+    "./06_global/g-colors.scss";

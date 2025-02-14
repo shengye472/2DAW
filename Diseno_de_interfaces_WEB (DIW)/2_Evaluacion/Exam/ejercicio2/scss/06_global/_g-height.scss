@@ -1,0 +1,6 @@
+/*Gloabal height*/
+@each $name, $value in $height{
+    .g-height-#{$name}{
+        height: var(--height-#{$name});
+    }
+}

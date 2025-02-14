@@ -1,0 +1,6 @@
+/*Global Timing*/
+@each $name in $timing{
+    .g-speed-#{$name}{
+        transition-timing-function: var(--timing-#{$name});
+    }
+}

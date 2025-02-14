@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 07</title>
+    <link rel="icon" href="assets/codigo.png" type="image/png">
+</head>
+
+<body>
+    <div class="g--width g--bg-color-red g--bg-color-green@tabled g--bg-color-blue@desktop g--bg-color-orange@fulldesktop"></div>
+</body>
+<style>
+    .g--width {
+        width: 200px;
+        height: 200px;
+    }
+
+    .g--bg-color-red {
+        background-color: #FF0000;
+    }
+
+    @media (min-width: 576px) {
+        .g--bg-color-green\@tabled {
+            background-color: #00FF00;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .g--bg-color-blue\@desktop {
+            background-color: #0000FF;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .g--bg-color-orange\@fulldesktop {
+            background-color: #FFA500;
+        }
+    }
+</style>
+
+</html>

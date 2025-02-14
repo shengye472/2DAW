@@ -1,0 +1,6 @@
+/*Global Width*/
+@each $name, $value in $width{
+    .width-#{$name}{
+        width: var(--width-#{$name});
+    }
+}

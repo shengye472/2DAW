@@ -1,0 +1,40 @@
+@keyframes mover {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0, 150px);
+    }
+
+    40% {
+        transform: translate(-150px, 150px);
+    }
+     
+
+    60% {
+        transform: translate(300px, 150px);
+    }
+
+    80% {
+        transform: translate(0, 150px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

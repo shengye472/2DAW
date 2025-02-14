@@ -1,0 +1,47 @@
+:root{
+    /*Colors*/
+    @each $name, $value in $colors{
+        --color-#{$name}: #{$value};
+    }
+
+    /*Width*/
+    @each $name, $value in $width{
+        --width-#{$name}: #{$value};
+    }
+
+    /*Height*/
+    @each $name, $value in $height{
+        --height-#{$name}: #{$value};
+    }
+
+    /*Timing*/
+    @each $name in $timing{
+        --timing-#{$name}: #{$name};
+    }
+
+    /*Time*/
+    @each $name in $time{
+        --time-#{$name}: #{$name}s;
+    }
+
+    /*Padding*/
+  @each $name, $value in $padding {
+    --padding-#{$name}: #{$value};
+    --padding-top-#{$name}: #{$value};
+    --padding-right-#{$name}: #{$value};
+    --padding-bottom-#{$name}: #{$value};
+    --padding-left-#{$name}: #{$value};
+  }
+
+  /*Margin*/
+  @each $name, $value in $margin {
+    --margin-#{$name}: #{$value};
+    --margin-top-#{$name}: #{$value};
+    --margin-right-#{$name}: #{$value};
+    --margin-bottom-#{$name}: #{$value};
+    --margin-left-#{$name}: #{$value};
+  }
+
+  /*Animacion*/
+    
+}
