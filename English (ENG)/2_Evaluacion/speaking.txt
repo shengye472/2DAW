@@ -1,0 +1,61 @@
+Version 1
+
+Interviewer: Presentation, ask about experience
+
+Candidate: Presentation, 5 years of experience, started in small grids, became Expert-Level Terrain Specialist
+
+Interviewer: Strategy for unknown areas?
+
+Candidate: Start in a corner or center, use Zero Exploration Stick, analyze numbers to locate mines
+
+Interviewer: Most difficult pattern?
+
+Candidate: 1-2-1 near a row of mines, requires extra information before acting
+
+Interviewer: Handling a 50/50 risk situation?
+
+Candidate: Stay calm, consult team, analyze grid, request controlled detonation if needed
+
+Interviewer: Adapting to moving mines?
+
+Candidate: Use dynamic sensors to track movement, adjust strategy accordingly
+
+Interviewer: If a teammate mislabels a mine?
+
+Candidate: Double-check, correct if necessary, ensure team safety, emphasize communication
+
+Interviewer: Strong logical thinking and teamwork, we’ll be in touch soon
+
+Candidate: Thanks, looking forward to the opportunity!
+
+
+
+Version 2
+
+Interviewer: Good morning, Mr. [Last Name]. Thank you for applying for the Minesweeper Technician position at MinasCorp. Can you tell me about your experience?
+
+Candidate: Good morning! I’ve worked in logical minefield exploration for five years. I specialize in expert-level grids and can clear a 16x30 field in under three minutes.
+
+Interviewer: Impressive. What’s your strategy for navigating an unknown minefield?
+
+Candidate: I start in a corner or center, clear safe areas quickly, and use number patterns to locate mines.
+
+Interviewer: What’s the trickiest pattern you’ve encountered?
+
+Candidate: The 1-2-1 pattern near a mine row—it often forces a risky guess. I try to gather more info before making a move.
+
+Interviewer: If you had a 50/50 chance of triggering a mine, what would you do?
+
+Candidate: I’d consult my team, analyze the grid, and if needed, request a controlled detonation.
+
+Interviewer: How would you handle a grid with moving mines?
+
+Candidate: I’d use dynamic sensors to track movement and predict safe paths.
+
+Interviewer: What if a teammate marks a mine incorrectly?
+
+Candidate: I’d double-check and correct it immediately. One mistake can cost the mission.
+
+Interviewer: I like your approach. We’ll be in touch soon.
+
+Candidate: Thank you! Looking forward to it.
