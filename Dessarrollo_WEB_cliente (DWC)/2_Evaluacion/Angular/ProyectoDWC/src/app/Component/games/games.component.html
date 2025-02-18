@@ -1,0 +1,26 @@
+<h3 class="text-center">Games</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">Id</th>
+            <th>GameCode</th>
+            <th>Name</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (game of GAMES; track game.id) {
+            <tr>
+                <td class="text-center">{{game.id}}</td>
+                <td>{{game.gameCode}}</td>
+                <td>{{game.title}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="moreDetail(game.gameCode)">More Detail</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="text-center">
+    <button class="btn btn-primary" (click)="goBack()">Volver</button>
+</div>

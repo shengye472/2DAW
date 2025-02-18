@@ -1,0 +1,75 @@
+<div>
+    <h3 class="text-center">{{game.title}}</h3>
+    <div class="text-start mx-5">
+        <div class="row ">
+            <label class="col-2">
+                <b>
+                    Game Code:
+                </b>
+            </label>
+            <div class="col">{{game.gameCode}}</div>
+        </div>
+        <div class="row">
+            <label class="col-2">
+                <b>
+                    Release Year:
+                </b>
+            </label>
+            <div class="col">{{game.releaseYear}}</div>
+        </div>
+        <div class="row">
+            <label class="col-2">
+                <b>
+                    Description:
+                </b>
+            </label>
+            <div class="col">{{game.description}}</div>
+        </div>
+        <div class="row mt-2">
+            <label class="col-2">
+                <b>
+                    Director:
+                </b>
+            </label>
+            <div class="col">
+                <div class="row">
+                    <label class="col-2">Name: </label>
+                    <div class="col">{{game.director.name}}</div>
+                </div>
+                <div class="row">
+                    <label class="col-2">Biography: </label>
+                    <div class="col">{{game.director.biography}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-6 g-4 mt-2">
+            <label class="col-2">
+                <b>
+                    Characters:
+                </b>
+            </label>
+            @for (character of game.characterGames; track character.id) {
+            <!-- <div class="col">
+                    <div class="row">
+                        <label class="col-3">Name:</label>
+                        <div class="col">{{character.name}}</div>
+                    </div>
+                    <div class="row">
+                        <label class="col-3">Role:</label>
+                        <div class="col">{{character.role}}</div>
+                    </div>
+                    <div class="row">
+                        <label class="col-3">Description:</label>
+                        <div class="col">{{character.description}}</div>
+                    </div>
+                </div> -->
+            <app-character [character]="character"></app-character>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-3">
+    <button class="btn btn-primary" (click)="goBack()">Volver</button>
+
+</div>

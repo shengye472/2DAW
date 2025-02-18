@@ -1,0 +1,94 @@
+{
+    "games": [
+        {
+            "id": 1,
+            "gameCode": "MI1-1990",
+            "title": "The Secret of Monkey Island",
+            "releaseYear": "1990",
+            "description": "Un joven aspirante a pirata, Guybrush Threepwood, intenta convertirse en un pirata durante su aventura en el Caribe.",
+            "director": {
+                "id": 1,
+                "name": "Ron Gilbert",
+                "biography": "Un desarrollador de videojuegos estadounidense, conocido por su trabajo en juegos de aventura como The Secret of Monkey Island y Monkey Island 2: LeChuck’s Revenge."
+            },
+            "characterGames": [
+                {
+                    "id": 1,
+                    "name": "Guybrush Threepwood",
+                    "role": "Personaje principal",
+                    "description": "Un joven aventurero que quiere convertirse en pirata."
+                },
+                {
+                    "id": 2,
+                    "name": "Elaine Marley",
+                    "role": "Personaje principal",
+                    "description": "La gobernadora de Isla Mêlée y el interés amoroso de Guybrush."
+                },
+                {
+                    "id": 3,
+                    "name": "LeChuck",
+                    "role": "Antagonista",
+                    "description": "Un temible pirata zombi, obsesionado con Elaine y con derrotar a Guybrush."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "gameCode": "MI2-1991",
+            "title": "Monkey Island 2: LeChuck's Revenge",
+            "releaseYear": "1991",
+            "description": "Guybrush Threepwood vuelve a buscar el tesoro de Big Whoop y se enfrenta una vez más al pirata zombi LeChuck.",
+            "director": {
+                "id": 1,
+                "name": "Ron Gilbert",
+                "biography": "Un desarrollador de videojuegos estadounidense, conocido por su trabajo en juegos de aventura como The Secret of Monkey Island y Monkey Island 2: LeChuck’s Revenge."
+            },
+            "characterGames": [
+                {
+                    "id": 1,
+                    "name": "Guybrush Threepwood",
+                    "role": "Personaje principal",
+                    "description": "Un joven aventurero que quiere convertirse en pirata."
+                },
+                {
+                    "id": 2,
+                    "name": "Elaine Marley",
+                    "role": "Personaje principal",
+                    "description": "La gobernadora de Isla Mêlée y el interés amoroso de Guybrush."
+                },
+                {
+                    "id": 3,
+                    "name": "LeChuck",
+                    "role": "Antagonista",
+                    "description": "Un temible pirata zombi, obsesionado con Elaine y con derrotar a Guybrush."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "gameCode": "IJ-FOA-1992",
+            "title": "Indiana Jones and the Fate of Atlantis",
+            "releaseYear": "1992",
+            "description": "Indiana Jones busca la mítica ciudad perdida de Atlantis en una aventura que se extiende por todo el mundo.",
+            "director": {
+                "id": 3,
+                "name": "Hal Barwood",
+                "biography": "Un diseñador de juegos que trabajó con LucasArts; conocido especialmente por su trabajo en Indiana Jones and the Fate of Atlantis."
+            },
+            "characterGames": [
+                {
+                    "id": 4,
+                    "name": "Indiana Jones",
+                    "role": "Personaje principal",
+                    "description": "Arqueólogo aventurero famoso por su látigo y su sombrero, siempre en busca de artefactos antiguos."
+                },
+                {
+                    "id": 5,
+                    "name": "Henry Jones Sr.",
+                    "role": "Personaje principal",
+                    "description": "Padre de Indiana Jones, su conocimiento del Santo Grial es crucial para la aventura."
+                }
+            ]
+        }
+    ]
+}
