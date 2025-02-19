@@ -1,0 +1,10 @@
+<h3 class="text-center">Panel de Tareas</h3>
+<div id="contenedor" class="row row-cols-1 row-cols-md-6 g-4">
+    @for (tarea of tareas; track tarea.id) {
+        <app-tarea [tarea]="tarea"></app-tarea>
+    }	
+</div>
+<br>
+<div class="text-center">
+    <button class="btn btn-primary" (click)="back()">Tareas</button>
+</div>
