@@ -40,15 +40,15 @@ Interviewer: Impressive. What’s your strategy for navigating an unknown minefi
 
 Candidate: I start in a corner or center, clear safe areas quickly, and use number patterns to locate mines.
 
-Interviewer: What’s the trickiest pattern you’ve encountered?
+Interviewer: What’s the trickiest pattern you’ve (encountered / find) ?
 
 Candidate: The 1-2-1 pattern near a mine row—it often forces a risky guess. I try to gather more info before making a move.
 
-Interviewer: If you had a 50/50 chance of triggering a mine, what would you do?
+Interviewer:  If you found yourself in a situation where a single step would detonate a mine but you didn't have enough information, what would you do?
 
 Candidate: I’d consult my team, analyze the grid, and if needed, request a controlled detonation.
 
-Interviewer: How would you handle a grid with moving mines?
+Interviewer: Now, suppose your team is assigned a highly unstable grid with moving mines. How would you adapt to this new variant?
 
 Candidate: I’d use dynamic sensors to track movement and predict safe paths.
 
@@ -56,6 +56,6 @@ Interviewer: What if a teammate marks a mine incorrectly?
 
 Candidate: I’d double-check and correct it immediately. One mistake can cost the mission.
 
-Interviewer: I like your approach. We’ll be in touch soon.
+Interviewer: (I like your approach / All right). Your logical skills and teamwork abilities are exactly what we’re looking for at MinasCorp. We’ll be in touch soon.
 
 Candidate: Thank you! Looking forward to it.
