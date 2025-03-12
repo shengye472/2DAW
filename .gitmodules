@@ -10,3 +10,6 @@
 [submodule "Despliegue_de_Aplicaciones_WEB (DAW)/2_Evaluacion/Tema_06(Despliegue Automatizado)/Ejercicio_Clase"]
 	path = Despliegue_de_Aplicaciones_WEB (DAW)/2_Evaluacion/Tema_06(Despliegue Automatizado)/Ejercicio_Clase
 	url = https://github.com/shengye472/Facturas
+[submodule "ProyectoDAW"]
+	path = Proyecto (PRO)
+	url = https://github.com/shengye472/ProyectoDAW
